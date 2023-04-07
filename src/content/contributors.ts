@@ -17,4 +17,10 @@ export const contributors = [
     image: 'doubtstars.webp',
     link: '',
   },
+  {
+    name: 'Interweaver',
+    text: 'Learn about Ethereum, Rocket Pool, running a node, maintaining a node. We will guide you',
+    image: 'interweaver.png',
+    link: 'https://github.com/arbora',
+  },
 ];
