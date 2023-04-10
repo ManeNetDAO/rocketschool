@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SVG, SVGName, Text } from '@/components/atoms/';
+import { Anchor, SVG, SVGName, Text, Flex } from "@/components/atoms/";
 
 export type Props = {
   isBig: boolean;
@@ -27,13 +27,19 @@ const Container = styled.div`
     div {
       color: #ffffff;
     }
+    a {
+      color: #ffffff;
+    }
     path {
       fill: #ffffff;
+    }
+    circle {
+      stroke: #ffffff;
     }
   }
 `;
 
-export const Card = ({ isBig, title, svg, about }: Props) => {
+export const Card = ({ isBig, title, svg, about, pointer }: Props) => {
   const imageSize = isBig ? 53 : 43;
   const aboutSize = isBig ? '16px' : '14px';
 
@@ -41,13 +47,19 @@ export const Card = ({ isBig, title, svg, about }: Props) => {
     <Container>
       <SVG name={svg} width={imageSize} height={imageSize} />
       {title && (
-        <Text fontWeight={700} color={'#282828'} fontSize={'24px'}>
+        <Text fontWeight={700} color={'#282828'} fontSize={'24px'} margin={'12px 0 16px 0'}>
           {title}
         </Text>
       )}
-      <Text fontWeight={700} color={'#282828'} fontSize={aboutSize}>
+      <Text fontWeight={700} color={'#282828'} fontSize={aboutSize} lineHeight={'29px'}>
         {about}
       </Text>
+      {pointer && (
+        <Flex justifyContent={'flex-end'} alignItems={'center'} margin={'12px 0 0 0'}>
+          <Anchor margin={'0 8px 0 0'} color={'#282828'} fontSize={'15px'} href={pointer.link}>{pointer.text}</Anchor>
+          <SVG name={'circleArrow'} width={27} height={19}/>
+        </Flex>
+      )}
     </Container>
   );
 };
