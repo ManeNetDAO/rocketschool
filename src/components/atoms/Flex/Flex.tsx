@@ -4,9 +4,11 @@ export const Flex = styled.div<{
   alignItems?: string;
   flexDirection?: string;
   margin?: string;
+  padding?: string;
   height?: string;
   width?: string;
   gap?: string;
+  whiteSpace?: string;
 }>`
   display: flex;
 
@@ -17,6 +19,9 @@ export const Flex = styled.div<{
   ${({ gap }) => gap && `gap: ${gap};`}
 
   ${({ margin }) => margin && `margin: ${margin};`}
+  ${({ padding }) => padding && `padding: ${padding};`}
   ${({ height }) => height && `height: ${height};`}
   ${({ width }) => width && `width: ${width};`}
+
+  ${({ whiteSpace }) => whiteSpace && `white-space: ${whiteSpace};`}
 `;

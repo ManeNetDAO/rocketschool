@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-import { Anchor, SVG, SVGName, Text, Flex } from '@/components/atoms/';
+import { SVG, SVGName, Text, Flex } from '@/components/atoms/';
+import { colors } from '@/constants/styles';
 
 export type Props = {
-  isBig: boolean;
   isSelected: boolean;
   setSelected: () => void;
   svg: SVGName;
-  title?: string;
+  title: string;
   about: string;
-  pointer?: {
+  pointer: {
     text: string;
     link: string;
   };
 };
 
-const Container = styled.div<{ isSelected: boolean }>`
+const Container = styled.a<{ isSelected: boolean }>`
   padding: 24px;
   border-radius: 14px;
   box-shadow: -7.89216px 5.63725px 43.9706px rgba(0, 0, 0, 0.1);
@@ -22,12 +22,7 @@ const Container = styled.div<{ isSelected: boolean }>`
   ${({ isSelected }) =>
     isSelected &&
     `
-    background: linear-gradient(
-      277.41deg,
-      #ff5c00 18.51%,
-      #ff7700 35.87%,
-      #ff8c39 64.93%
-    );
+    background: linear-gradient(270.18deg, #194A84 8.85%, #174780 63.18%, #0F3057 154.12%);
     div {
       color: #ffffff;
     }
@@ -44,7 +39,6 @@ const Container = styled.div<{ isSelected: boolean }>`
 `;
 
 export const Card = ({
-  isBig,
   title,
   svg,
   about,
@@ -52,12 +46,13 @@ export const Card = ({
   isSelected,
   setSelected,
 }: Props) => {
-  const imageSize = isBig ? 53 : 43;
-  const aboutSize = isBig ? '16px' : '14px';
-
   return (
-    <Container isSelected={isSelected} onMouseOver={setSelected}>
-      <SVG name={svg} width={imageSize} height={imageSize} />
+    <Container
+      isSelected={isSelected}
+      onMouseOver={setSelected}
+      href={pointer.link}
+    >
+      <SVG name={svg} width={53} height={53} color={colors.image.blue} />
       {title && (
         <Text
           fontWeight={700}
@@ -71,7 +66,7 @@ export const Card = ({
       <Text
         fontWeight={700}
         color={'#282828'}
-        fontSize={aboutSize}
+        fontSize={'16px'}
         lineHeight={'29px'}
       >
         {about}
@@ -82,15 +77,19 @@ export const Card = ({
           alignItems={'center'}
           margin={'12px 0 0 0'}
         >
-          <Anchor
+          <Text
             margin={'0 8px 0 0'}
-            color={'#282828'}
+            color={colors.image.blue}
             fontSize={'15px'}
-            href={pointer.link}
           >
             {pointer.text}
-          </Anchor>
-          <SVG name={'circleArrow'} width={27} height={19} />
+          </Text>
+          <SVG
+            name={'circleArrow'}
+            width={27}
+            height={19}
+            color={colors.image.blue}
+          />
         </Flex>
       )}
     </Container>

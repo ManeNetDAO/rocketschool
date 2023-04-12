@@ -23,8 +23,6 @@ const Contributor = styled.div<{ isSelected?: boolean }>`
            background: linear-gradient(277.41deg, #FF5C00 18.51%, #FF7700 35.87%, #FF8C39 64.93%);
            border-radius: 14.5822px;
           `}
-
-  cursor: pointer;
 `;
 
 type Props = {
@@ -45,7 +43,7 @@ export const Contributors = ({ contributors }: Props) => {
 
   return (
     <div>
-      <div>
+      <Box margin={'0 0 60px 0'}>
         <Text
           color={'#282828'}
           fontWeight={700}
@@ -70,14 +68,14 @@ export const Contributors = ({ contributors }: Props) => {
         >
           Crew
         </Text>
-      </div>
+      </Box>
       <Wrapper>
         {contributors.map(({ name, image, text, link }, index) => {
           return (
             <Contributor
               key={name}
               isSelected={selectedIndex === index}
-              onClick={() => setSelected(index)}
+              onMouseOver={() => setSelected(index)}
             >
               <Image
                 src={`/images/${image}`}

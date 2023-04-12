@@ -21,3 +21,5 @@ export const homePageCards = [
     pointer: { text: 'Watch our Guides', link: '/wrench' },
   },
 ];
+
+export const videoUrl = 'https://www.youtube.com/embed/aAs8YuGQg18';

@@ -25,6 +25,13 @@ const contactContentElem = (
 export const navigation: Array<NavigationElem> = [
   { name: 'learn about ethereum', isPage: true, link: '' },
   { name: 'run your own node', isPage: true, link: '' },
-  { name: 'maintain your own node', isPage: true, link: '' },
+  { name: 'maintain your own nodes', isPage: true, link: '' },
   { name: 'contact', isPage: false, contentElem: contactContentElem },
 ];
+
+export const footer = {
+  about:
+    'Rocket School is an open-source learning platform that teaches users about Ethereum, staking, running a node, and the Rocket Pool protocol.',
+  disclaimer:
+    'This project is backed by the EVMavericks community and is not affiliated with Rocket Pool.',
+};

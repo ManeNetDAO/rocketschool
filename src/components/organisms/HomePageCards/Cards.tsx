@@ -12,7 +12,6 @@ export const Cards = () => {
           <Card
             isSelected={index === selectedIndex}
             key={svg}
-            isBig={true}
             svg={svg}
             about={about}
             title={title}
