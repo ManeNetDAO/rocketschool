@@ -17,7 +17,12 @@ const SVGWrapper = styled.div<{
   height: ${({ height }) => `${height}px;`}
 `;
 
-export type SVGName = 'ethereum' | 'nodes' | 'wrench';
+export type SVGName =
+  | 'ethereum'
+  | 'nodes'
+  | 'wrench'
+  | 'circleArrow'
+  | 'rocket';
 type props = {
   id?: string;
   name: SVGName;
