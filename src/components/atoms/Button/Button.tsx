@@ -4,13 +4,14 @@ export const Button = styled.button<{
   isLight?: boolean;
   padding?: string;
   margin?: string;
+  fontSize?: string;
 }>`
   cursor: pointer;
   border-style: none;
   text-align: center;
   white-space: nowrap;
 
-  font-size: 15px;
+  font-size: ${({ fontSize }) => `${fontSize || '15px'}`};
   font-weight: 500;
   padding: ${({ padding }) => `${padding || '10px 30px'}`};
   ${({ margin }) => margin && `margin: ${margin};`}

@@ -72,6 +72,7 @@ export const Footer = () => {
                       color={colors.text.white}
                       fontSize={'14px'}
                       padding={'0 48px'}
+                      fontWeight={700}
                     >
                       {n.name}
                     </Anchor>
@@ -80,10 +81,11 @@ export const Footer = () => {
             </nav>
           </Flex>
           <Flex flexDirection={'column'}>
-            <Text color={colors.text.white} fontWeight={600}>
+            <Text color={colors.text.white} fontSize={'14px'} fontWeight={700}>
               Looking for something else?
             </Text>
             <Button
+              fontSize={'12px'}
               margin={'12px 0 0 0'}
               isLight
               onClick={() =>
@@ -102,7 +104,7 @@ export const Footer = () => {
             <Anchor
               fontSize={'14px'}
               color={colors.text.white}
-              margin={'0 12px 0 0'}
+              margin={'0 40px 0 0'}
             >
               Privacy Policy
             </Anchor>
