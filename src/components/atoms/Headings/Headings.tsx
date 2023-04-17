@@ -6,11 +6,15 @@ export const H1 = styled.h1<{
   fontWeight?: number;
   isInline?: boolean;
   lineHeight?: string;
+  textAlign?: string;
+  padding?: string;
 }>`
   color: ${({ color }) => (color ? color : 'rgba(40, 40, 40, 1)')};
   ${({ fontSize }) => fontSize && `font-size: ${fontSize};`}
   ${({ fontWeight }) => fontWeight && `font-weight: ${fontWeight};`}
   ${({ lineHeight }) => lineHeight && `line-height: ${lineHeight};`}
+  ${({ textAlign }) => textAlign && `text-align: ${textAlign};`}
+  ${({ padding }) => padding && `padding: ${padding};`}
   ${({ isInline }) => isInline && `display: inline;`}
 `;
 

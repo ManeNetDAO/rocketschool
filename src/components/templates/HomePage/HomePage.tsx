@@ -15,7 +15,7 @@ export const HomePage = () => {
     <div>
       <main>
         <HeroSection
-          backgroundImage={'url(/images/heroBG.png)'}
+          backgroundImage={'url(/images/home-hero.jpeg)'}
           backgroundSize={'cover'}
         >
           <Header />

@@ -5,6 +5,7 @@ export const Button = styled.button<{
   padding?: string;
   margin?: string;
   fontSize?: string;
+  alignSelf?: string;
 }>`
   cursor: pointer;
   border-style: none;
@@ -15,6 +16,7 @@ export const Button = styled.button<{
   font-weight: 500;
   padding: ${({ padding }) => `${padding || '10px 30px'}`};
   ${({ margin }) => margin && `margin: ${margin};`}
+  ${({ alignSelf }) => alignSelf && `align-self: ${alignSelf};`}
 
   font-family: Poppins, sans-serif;
   border-radius: 63px;

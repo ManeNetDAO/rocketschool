@@ -1,5 +1,7 @@
 import { Button, Flex, Text, H1 } from '@/components/atoms';
 import { colors } from '@/constants/styles';
+import { ColorHeading } from '@/components/molecules/ColorHeading/ColorHeading';
+import { heroLines } from '@/content/homePage';
 
 export const Hero = () => {
   return (
@@ -13,23 +15,7 @@ export const Hero = () => {
         LEARN DECENTRALIZED STAKING
       </Text>
       <H1 lineHeight={'53px'}>
-        <Flex>
-          <Text
-            display={'inline'}
-            color={colors.text.orange}
-            fontSize={'52px'}
-            fontWeight={700}
-          >
-            Learn&nbsp;
-          </Text>
-          <Text display={'inline'} fontSize={'52px'} fontWeight={700}>
-            how to run
-          </Text>
-        </Flex>
-        <Text fontSize={'52px'} fontWeight={700}>
-          {' '}
-          a node from home
-        </Text>
+        <ColorHeading fontSize={'52px'} lines={heroLines} />
       </H1>
       <Text
         fontSize={'16px'}
