@@ -16,6 +16,7 @@ import React, { ReactNode, useState } from 'react';
 import { Modal } from '@/components/molecules/Modal/Modal';
 
 const BackgroundWrapper = styled.div`
+  position: relative;
   background: linear-gradient(
     277.41deg,
     #194a84 18.51%,
@@ -34,6 +35,14 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <BackgroundWrapper>
+        <Absolute top={'-160px'} zIndex={3} width={'100%'} height={'206px'}>
+          <Image
+            src={'/images/footer-bg-shapes.png'}
+            alt={''}
+            fill={true}
+            objectFit={'contain'}
+          />
+        </Absolute>
         <Box width={'100%'} height={'193px'} position={'relative'}>
           <Absolute top={'-40px'} zIndex={2} left={'49.6%'} centered>
             <SVG name={'rocket'} width={45} height={95} />

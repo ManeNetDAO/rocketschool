@@ -22,7 +22,8 @@ export type SVGName =
   | 'nodes'
   | 'wrench'
   | 'circleArrow'
-  | 'rocket';
+  | 'rocket'
+  | 'check';
 type props = {
   id?: string;
   name: SVGName;

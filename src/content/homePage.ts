@@ -1,3 +1,21 @@
+import { Line } from '@/components/molecules/ColorHeading/ColorHeading';
+
+export const heroLines: Array<Line> = [
+  [
+    { text: `Learn\u00A0`, color: 'orange' },
+    { text: 'how to run', color: 'black' },
+  ],
+  [{ text: 'a node from home', color: 'black' }],
+];
+
+export const contributorsHeading: Array<Line> = [
+  [
+    { text: 'The\u00A0', color: 'black' },
+    { text: 'Rocket School\u00A0', color: 'orange' },
+    { text: 'Crew', color: 'black' },
+  ],
+];
+
 export const homePageCards = [
   {
     svg: 'ethereum' as const,

@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Image from 'next/image';
 
 import { getRandomInRange } from '@/utils/random';
-import { Box, Text, Anchor } from '@/components/atoms';
+import { Box, Text, Anchor, H2 } from '@/components/atoms';
+import { ColorHeading } from '@/components/molecules/ColorHeading/ColorHeading';
+import { contributorsHeading } from '@/content/homePage';
 
 const Wrapper = styled.div`
   display: inline-flex;
@@ -43,32 +45,9 @@ export const Contributors = ({ contributors }: Props) => {
 
   return (
     <div>
-      <Box margin={'0 0 60px 0'}>
-        <Text
-          color={'#282828'}
-          fontWeight={700}
-          fontSize={'45px'}
-          display={'inline'}
-        >
-          The{' '}
-        </Text>
-        <Text
-          color={'#F26122'}
-          fontWeight={700}
-          fontSize={'45px'}
-          display={'inline'}
-        >
-          Rocket School{' '}
-        </Text>
-        <Text
-          color={'#282828'}
-          fontWeight={700}
-          fontSize={'45px'}
-          display={'inline'}
-        >
-          Crew
-        </Text>
-      </Box>
+      <H2 margin={'0 0 60px 0'}>
+        <ColorHeading fontSize={'45px'} lines={contributorsHeading} />
+      </H2>
       <Wrapper>
         {contributors.map(({ name, image, text, link }, index) => {
           return (
