@@ -9,6 +9,7 @@ export const Flex = styled.div<{
   width?: string;
   gap?: string;
   whiteSpace?: string;
+  position?: string;
 }>`
   display: flex;
 
@@ -24,4 +25,5 @@ export const Flex = styled.div<{
   ${({ width }) => width && `width: ${width};`}
 
   ${({ whiteSpace }) => whiteSpace && `white-space: ${whiteSpace};`}
+  ${({ position }) => position && `position: ${position};`}
 `;
