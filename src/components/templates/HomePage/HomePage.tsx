@@ -9,6 +9,7 @@ import { colors } from '@/constants/styles';
 import { Footer } from '@/components/organisms/Footer/Footer';
 import { videoUrl } from '@/content/homePage';
 import Image from 'next/image';
+import { AnimatedImage } from '@/components/molecules/AnimatedImage/AnimatedImage';
 
 export const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ export const HomePage = () => {
           backgroundImage={'url(/images/home-hero.jpeg)'}
           backgroundSize={'cover'}
         >
+          <AnimatedImage src={'images/hero_shapes.png'} />
           <Header />
           <Hero />
         </HeroSection>
