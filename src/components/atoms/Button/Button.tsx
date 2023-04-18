@@ -28,6 +28,8 @@ export const Button = styled.button<{
   );
   color: #ffffff;
 
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   ${({ isLight }) =>
     isLight &&
     `

@@ -24,8 +24,8 @@ const contactContentElem = (
 
 export const navigation: Array<NavigationElem> = [
   { name: 'learn about ethereum', isPage: true, link: '/learn-about' },
-  { name: 'run your own node', isPage: true, link: '' },
-  { name: 'maintain your own node', isPage: true, link: '' },
+  { name: 'run your own node', isPage: true, link: '/videos' },
+  { name: 'maintain your own node', isPage: true, link: '/videos' },
   { name: 'contact', isPage: false, contentElem: contactContentElem },
 ];
 
