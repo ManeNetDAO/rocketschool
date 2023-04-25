@@ -23,4 +23,10 @@ export const contributors = [
     image: 'interweaver.png',
     link: 'https://github.com/arbora',
   },
+  {
+    name: 'ZombieBP',
+    text: 'Web Dev guy who lets Eth and Rocket Pool guide his gwei',
+    image: 'zombiebp.png',
+    link: 'https://github.com/ZombieBP',
+  },
 ];
