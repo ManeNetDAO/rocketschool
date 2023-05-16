@@ -6,6 +6,7 @@ import { getRandomInRange } from '@/utils/random';
 import { Box, Text, Anchor, H2 } from '@/components/atoms';
 import { ColorHeading } from '@/components/molecules/ColorHeading/ColorHeading';
 import { contributorsHeading } from '@/content/homePage';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 const Wrapper = styled.div`
   display: inline-flex;
@@ -17,14 +18,27 @@ const Wrapper = styled.div`
 const Contributor = styled.div<{ isSelected?: boolean }>`
   display: flex;
   align-items: center;
-  padding: 24px 24px 24px 24px;
+  padding: 24px;
   position: relative;
   ${({ isSelected }) =>
     isSelected &&
     `right: 70px;
            background: linear-gradient(277.41deg, #FF5C00 18.51%, #FF7700 35.87%, #FF8C39 64.93%);
            border-radius: 14.5822px;
+           width: calc(100% + 70px);
+           
+     ${mediaQueries.mobile} {
+     right: 0px;
+     width: 100%;
+  }
           `}
+  ${mediaQueries.mobile} {
+    padding: 16px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
 `;
 
 type Props = {
@@ -36,6 +50,12 @@ type Props = {
   }>;
 };
 
+export const AboutText = styled(Text)`
+  ${mediaQueries.mobile} {
+    width: 280px;
+  }
+`;
+
 export const Contributors = ({ contributors }: Props) => {
   const [selectedIndex, setSelected] = useState(0);
   useEffect(() => {
@@ -46,7 +66,11 @@ export const Contributors = ({ contributors }: Props) => {
   return (
     <div>
       <H2 margin={'0 0 60px 0'}>
-        <ColorHeading fontSize={'45px'} lines={contributorsHeading} />
+        <ColorHeading
+          fontSize={'45px'}
+          mobileSize={'28px'}
+          lines={contributorsHeading}
+        />
       </H2>
       <Wrapper>
         {contributors.map(({ name, image, text, link }, index) => {
@@ -63,7 +87,12 @@ export const Contributors = ({ contributors }: Props) => {
                 height={70}
                 style={{ borderRadius: '50%' }}
               />
-              <Box margin={'0 0 0 16px'} height={'70px'} width={'420px'}>
+              <Box
+                margin={'0 0 0 16px'}
+                height={'70px'}
+                width={'420px'}
+                mobileWidth={'324px'}
+              >
                 {link ? (
                   <Anchor
                     href={link}
@@ -82,7 +111,7 @@ export const Contributors = ({ contributors }: Props) => {
                     {name}
                   </Text>
                 )}
-                <Text
+                <AboutText
                   fontSize={'13px'}
                   fontWeight={400}
                   color={selectedIndex === index ? '#FFFFFF' : ''}
@@ -90,7 +119,7 @@ export const Contributors = ({ contributors }: Props) => {
                   width={'385px'}
                 >
                   {text}
-                </Text>
+                </AboutText>
               </Box>
             </Contributor>
           );

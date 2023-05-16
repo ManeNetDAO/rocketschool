@@ -6,6 +6,7 @@ import { Modal } from '@/components/molecules/Modal/Modal';
 
 import { navigation } from '@/content/global';
 import { colors } from '@/constants/styles';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export const List = styled.ul`
   display: flex;
@@ -20,12 +21,19 @@ const Item = styled.li`
   white-space: nowrap;
 `;
 
+const StyledNav = styled.nav`
+  display: none;
+  ${mediaQueries.desktop} {
+    display: inherit;
+  }
+`;
+
 export const Navigation = () => {
   const [modalContent, setModal] = useState<ReactNode | null>(null);
 
   return (
     <React.Fragment>
-      <nav>
+      <StyledNav>
         <List>
           {navigation.map((n) => {
             return (
@@ -47,7 +55,7 @@ export const Navigation = () => {
             );
           })}
         </List>
-      </nav>
+      </StyledNav>
       {modalContent && (
         <Modal close={() => setModal(null)}>{modalContent}</Modal>
       )}

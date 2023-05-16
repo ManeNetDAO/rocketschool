@@ -8,10 +8,11 @@ export type Line = Array<{
 }>;
 type Props = {
   fontSize: string;
+  mobileSize: string;
   lines: Array<Line>;
 };
 
-export const ColorHeading = ({ lines, fontSize }: Props) => {
+export const ColorHeading = ({ lines, fontSize, mobileSize }: Props) => {
   return (
     <React.Fragment>
       {lines.map((l, i) => (
@@ -20,6 +21,7 @@ export const ColorHeading = ({ lines, fontSize }: Props) => {
             <Text
               key={t.text}
               fontSize={fontSize}
+              mobileSize={mobileSize}
               color={colors.text[t.color]}
               fontWeight={700}
             >

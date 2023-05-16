@@ -1,7 +1,6 @@
-import { Navigation } from '@/components/molecules/Navigation/Navigation';
-import { Flex, Section, H1, Anchor } from '@/components/atoms';
-import Image from 'next/image';
+import { Section, H1 } from '@/components/atoms';
 import { colors } from '@/constants/styles';
+import { Header } from '@/components/organisms/Header/Header';
 
 export const SecondaryHeader = ({ title }: { title: string }) => {
   return (
@@ -11,18 +10,7 @@ export const SecondaryHeader = ({ title }: { title: string }) => {
       height={'346px'}
       padding={'20px 100px 0 100px'}
     >
-      <header>
-        <Flex justifyContent={'space-between'}>
-          <Anchor href={'/'}>
-            <Image
-              src={`/images/logo.png`}
-              alt={'Rocket School'}
-              width={248}
-              height={48}
-            />
-          </Anchor>
-          <Navigation />
-        </Flex>
+      <Header>
         <H1
           color={colors.text.white}
           fontSize={'46px'}
@@ -32,7 +20,7 @@ export const SecondaryHeader = ({ title }: { title: string }) => {
         >
           {title}
         </H1>
-      </header>
+      </Header>
     </Section>
   );
 };

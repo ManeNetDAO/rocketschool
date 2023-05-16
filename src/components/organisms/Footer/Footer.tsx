@@ -14,6 +14,7 @@ import { footer, navigation } from '@/content/global';
 import { colors } from '@/constants/styles';
 import React, { ReactNode, useState } from 'react';
 import { Modal } from '@/components/molecules/Modal/Modal';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 const BackgroundWrapper = styled.div`
   position: relative;
@@ -27,6 +28,25 @@ const BackgroundWrapper = styled.div`
 
 const StyledFooter = styled.footer`
   padding-top: 95px;
+`;
+
+const MobileFlex = styled(Flex)`
+  ${mediaQueries.mobile} {
+    padding: 20px;
+    font-size: 12px;
+  }
+`;
+
+const LeftText = styled(Text)`
+  ${mediaQueries.mobile} {
+    max-width: 50%;
+  }
+`;
+
+const DesktopFlex = styled(Flex)`
+  ${mediaQueries.mobile} {
+    display: none;
+  }
 `;
 
 export const Footer = () => {
@@ -44,17 +64,12 @@ export const Footer = () => {
           />
         </Absolute>
         <Box width={'100%'} height={'193px'} position={'relative'}>
-          <Absolute top={'-40px'} zIndex={2} left={'49.6%'} centered>
+          <Absolute top={'-38px'} zIndex={2} left={'49.6%'} centered>
             <SVG name={'rocket'} width={45} height={95} />
           </Absolute>
-          <Image
-            src={'/images/clouds-tp.png'}
-            alt={''}
-            fill={true}
-            objectFit={'cover'}
-          />
+          <Image src={'/images/clouds-tp.png'} alt={''} fill={true} />
         </Box>
-        <Flex padding={'60px 120px 40px 120px'}>
+        <MobileFlex padding={'60px 120px 40px 120px'}>
           <Flex flexDirection={'column'}>
             <Image
               src={`/images/logo.png`}
@@ -62,15 +77,15 @@ export const Footer = () => {
               width={242}
               height={48}
             />
-            <Text
+            <LeftText
               color={colors.text.white}
               fontSize={'14px'}
               margin={'12px 0 0 0'}
             >
               {footer.about}
-            </Text>
+            </LeftText>
           </Flex>
-          <Flex whiteSpace={'nowrap'}>
+          <DesktopFlex whiteSpace={'nowrap'}>
             <nav>
               {navigation
                 .filter(({ isPage }) => isPage)
@@ -88,8 +103,8 @@ export const Footer = () => {
                   );
                 })}
             </nav>
-          </Flex>
-          <Flex flexDirection={'column'}>
+          </DesktopFlex>
+          <DesktopFlex flexDirection={'column'}>
             <Text color={colors.text.white} fontSize={'14px'} fontWeight={700}>
               Looking for something else?
             </Text>
@@ -103,12 +118,12 @@ export const Footer = () => {
             >
               Request Content
             </Button>
-          </Flex>
-        </Flex>
-        <Flex justifyContent={'space-between'} padding={'0 120px'}>
-          <Text fontSize={'14px'} color={colors.text.white}>
+          </DesktopFlex>
+        </MobileFlex>
+        <MobileFlex justifyContent={'space-between'} padding={'0 120px'}>
+          <LeftText fontSize={'14px'} color={colors.text.white}>
             {footer.disclaimer}
-          </Text>
+          </LeftText>
           <Flex padding={'0 0 18px 0'}>
             <Anchor
               fontSize={'14px'}
@@ -121,7 +136,7 @@ export const Footer = () => {
               Terms of Service
             </Anchor>
           </Flex>
-        </Flex>
+        </MobileFlex>
       </BackgroundWrapper>
       {modalContent && (
         <Modal close={() => setModal(null)}>{modalContent}</Modal>

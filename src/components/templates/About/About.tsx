@@ -38,7 +38,11 @@ export const About = () => {
             width={'577px'}
           >
             <h2>
-              <ColorHeading fontSize={'48px'} lines={firstHeading} />
+              <ColorHeading
+                fontSize={'48px'}
+                lines={firstHeading}
+                mobileSize={'32px'}
+              />
             </h2>
             <Text
               fontSize={'14px'}
@@ -89,7 +93,11 @@ export const About = () => {
 
           <Flex flexDirection={'column'} alignItems={'flex-start'}>
             <H2 margin={'0 0 46px'}>
-              <ColorHeading fontSize={'48px'} lines={secondHeading} />
+              <ColorHeading
+                fontSize={'48px'}
+                lines={secondHeading}
+                mobileSize={'32px'}
+              />
             </H2>
             <CardGrid gridCards={firstGrid} />
             <Button
@@ -106,7 +114,11 @@ export const About = () => {
         <Section display={'flex'} justifyContent={'space-between'}>
           <Flex flexDirection={'column'} alignItems={'flex-start'}>
             <H2 margin={'0 0 46px'}>
-              <ColorHeading fontSize={'48px'} lines={thirdHeading} />
+              <ColorHeading
+                fontSize={'48px'}
+                lines={thirdHeading}
+                mobileSize={'32px'}
+              />
             </H2>
             <CardGrid gridCards={secondGrid} />
             <Button
