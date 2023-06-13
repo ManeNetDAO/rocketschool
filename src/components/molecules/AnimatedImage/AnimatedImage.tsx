@@ -49,6 +49,7 @@ export const AnimatedImage = ({
 }) => {
   return (
     <AnimationContainer height={height}>
+      {/*eslint-disable-next-line*/}
       <img src={src} alt={''} />
     </AnimationContainer>
   );
