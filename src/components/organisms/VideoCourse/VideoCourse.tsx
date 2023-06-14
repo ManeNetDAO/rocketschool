@@ -1,12 +1,15 @@
 import { useRouter } from 'next/router';
 import React, { useState, useCallback, useEffect } from 'react';
 import { Flex, LazyVideo, Text, Button, Absolute } from '@/components/atoms';
-import { ColumnList } from '@/components/molecules/ColumnList/ColumnList';
-import { videos } from '@/content/videoPage';
+import {
+  ColumnList,
+  ElemData,
+} from '@/components/molecules/ColumnList/ColumnList';
 import { Loader } from '@/components/atoms/Loader/Loader';
 
-export const VideoCourse = () => {
+export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
   const { push, query, isReady } = useRouter();
+  const { slug } = query;
   const [selectedIndex, setSelected] = useState(0);
   const [iframeLoaded, setLoaded] = useState(false);
   const [queryIsReady, setReady] = useState(false);
@@ -32,13 +35,14 @@ export const VideoCourse = () => {
       setSelected(newIndex);
       push(
         {
+          pathname: slug as string,
           query: { video: newIndex + 1 },
         },
         undefined,
         { shallow: true }
       );
     },
-    [push, selectedIndex]
+    [push, selectedIndex, slug]
   );
 
   return (

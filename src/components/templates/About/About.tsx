@@ -1,28 +1,48 @@
 import { Flex, H2, Text, Button, Section, SVG } from '@/components/atoms';
 import { Footer } from '@/components/organisms/Footer/Footer';
-import {
-  primaryHeading,
-  firstHeading,
-  secondHeading,
-  thirdHeading,
-  checks,
-  paragraph,
-  firstImage,
-  firstGrid,
-  secondGrid,
-  secondImage,
-  thirdImage,
-  firstVideoLink,
-  secondVideoLink,
-  thirdVideoLink,
-} from '@/content/aboutPage';
 import Image from 'next/image';
-import { ColorHeading } from '@/components/molecules/ColorHeading/ColorHeading';
+import {
+  ColorHeading,
+  Line,
+} from '@/components/molecules/ColorHeading/ColorHeading';
 import { Main } from '@/components/templates/About/About.styles';
-import { CardGrid } from '@/components/organisms/CardGrid/CardGrid';
+import { CardGrid, GridCards } from '@/components/organisms/CardGrid/CardGrid';
 import { SecondaryHeader } from '@/components/organisms/Header/SecondaryHeader';
 
-export const About = () => {
+type Props = {
+  primaryHeading: string;
+  firstHeading: Array<Line>;
+  secondHeading: Array<Line>;
+  thirdHeading: Array<Line>;
+  checks: Array<string>;
+  paragraph: string;
+  firstImage: string;
+  firstGrid: GridCards;
+  secondGrid: GridCards;
+  secondImage: string;
+  thirdImage: string;
+  firstVideoLink: string;
+  secondVideoLink: string;
+  thirdVideoLink: string;
+};
+
+export const About = (x: Props) => {
+  const {
+    primaryHeading,
+    firstHeading,
+    secondHeading,
+    thirdHeading,
+    checks,
+    paragraph,
+    firstImage,
+    firstGrid,
+    secondGrid,
+    secondImage,
+    thirdImage,
+    firstVideoLink,
+    secondVideoLink,
+    thirdVideoLink,
+  } = x;
   return (
     <div>
       <SecondaryHeader title={primaryHeading} />
