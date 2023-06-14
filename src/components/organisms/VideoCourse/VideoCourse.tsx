@@ -27,6 +27,7 @@ export const VideoCourse = () => {
 
   const handleChange = useCallback(
     (newIndex: number) => {
+      if (selectedIndex === newIndex) return;
       setLoaded(false);
       setSelected(newIndex);
       push(
@@ -37,7 +38,7 @@ export const VideoCourse = () => {
         { shallow: true }
       );
     },
-    [push]
+    [push, selectedIndex]
   );
 
   return (

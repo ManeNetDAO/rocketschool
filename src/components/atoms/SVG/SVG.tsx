@@ -2,7 +2,7 @@ import { memo } from 'react';
 import styled from 'styled-components';
 import dynamic, { LoadableComponent } from 'next/dynamic';
 
-const SVGWrapper = styled.div<{
+export const SVGWrapper = styled.div<{
   width: number;
   height: number;
   margin?: string;

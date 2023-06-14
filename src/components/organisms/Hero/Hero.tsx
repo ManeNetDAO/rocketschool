@@ -1,4 +1,4 @@
-import { Button, Flex, Text, H1 } from '@/components/atoms';
+import { Button, Flex, Text, H1, Mobile, Desktop } from '@/components/atoms';
 import { colors } from '@/constants/styles';
 import { ColorHeading } from '@/components/molecules/ColorHeading/ColorHeading';
 import { heroLines } from '@/content/homePage';
@@ -15,7 +15,7 @@ export const Hero = () => {
         LEARN DECENTRALIZED STAKING
       </Text>
       <H1 lineHeight={'53px'}>
-        <ColorHeading fontSize={'52px'} lines={heroLines} />
+        <ColorHeading fontSize={'52px'} mobileSize={'32px'} lines={heroLines} />
       </H1>
       <Text
         fontSize={'16px'}
@@ -29,9 +29,16 @@ export const Hero = () => {
       </Text>
       <Flex>
         <Button margin={'0 12px 0 0'}>Get started</Button>
-        <Button isLight padding={'10px 40px'}>
-          What is Rocket School?
-        </Button>
+        <Desktop>
+          <Button isLight padding={'10px 40px'}>
+            What is Rocket School?
+          </Button>
+        </Desktop>
+        <Mobile>
+          <Button isLight padding={'10px 40px'}>
+            About us
+          </Button>
+        </Mobile>
       </Flex>
     </Flex>
   );

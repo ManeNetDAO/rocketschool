@@ -23,8 +23,8 @@ const shift = keyframes`
   }
 `;
 
-const AnimationContainer = styled.div`
-  height: calc(60%);
+const AnimationContainer = styled.div<{ height?: string }>`
+  height: ${({ height }) => (height ? height : '60%')};
   width: calc(100% + 30px);
   -webkit-animation: ${shift} 12s ease-in-out infinite;
   animation: ${shift} 12s ease-in-out infinite;
@@ -40,9 +40,15 @@ const AnimationContainer = styled.div`
   pointer-events: none;
 `;
 
-export const AnimatedImage = ({ src }: { src: string }) => {
+export const AnimatedImage = ({
+  src,
+  height,
+}: {
+  src: string;
+  height?: string;
+}) => {
   return (
-    <AnimationContainer>
+    <AnimationContainer height={height}>
       <img src={src} alt={''} />
     </AnimationContainer>
   );

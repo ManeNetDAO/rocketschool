@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export const Section = styled.section<{
   display?: string;
@@ -8,6 +9,7 @@ export const Section = styled.section<{
   backgroundSize?: string;
   width?: string;
   height?: string;
+  mobilePadding?: string;
 }>`
   ${({ display }) => display && `display: ${display};`}
   ${({ width }) => width && `width: ${width};`}
@@ -24,4 +26,12 @@ export const Section = styled.section<{
     `}
   ${({ backgroundSize }) =>
     backgroundSize && `background-size: ${backgroundSize};`}
+
+  ${({ mobilePadding }) =>
+    mobilePadding &&
+    `
+    ${mediaQueries.mobile} {
+      padding: ${mobilePadding};
+  }
+  `}
 `;

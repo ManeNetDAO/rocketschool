@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { SVG, SVGName, Text, Flex } from '@/components/atoms/';
+import { SVG, SVGName, Text, Flex, SVGWrapper } from '@/components/atoms/';
 import { colors } from '@/constants/styles';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export type Props = {
   isSelected: boolean;
@@ -18,6 +19,7 @@ const Container = styled.a<{ isSelected: boolean }>`
   padding: 24px;
   border-radius: 14px;
   box-shadow: -7.89216px 5.63725px 43.9706px rgba(0, 0, 0, 0.1);
+  min-width: 170px;
 
   ${({ isSelected }) =>
     isSelected &&
@@ -36,6 +38,15 @@ const Container = styled.a<{ isSelected: boolean }>`
       stroke: #ffffff;
     }
   `}
+
+  ${mediaQueries.mobile} {
+    padding: 12px;
+
+    ${SVGWrapper} {
+      width: 32px;
+      height: 32px;
+    }
+  }
 `;
 
 export const Card = ({
@@ -59,6 +70,7 @@ export const Card = ({
           color={'#282828'}
           fontSize={'24px'}
           margin={'12px 0 16px 0'}
+          mobileSize={'16px'}
         >
           {title}
         </Text>
@@ -67,6 +79,7 @@ export const Card = ({
         fontWeight={700}
         color={'#282828'}
         fontSize={'16px'}
+        mobileSize={'12px'}
         lineHeight={'29px'}
       >
         {about}
@@ -81,6 +94,7 @@ export const Card = ({
             margin={'0 8px 0 0'}
             color={colors.image.blue}
             fontSize={'15px'}
+            mobileSize={'12px'}
           >
             {pointer.text}
           </Text>
