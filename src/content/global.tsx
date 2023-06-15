@@ -23,9 +23,10 @@ const contactContentElem = (
 );
 
 export const navigation: Array<NavigationElem> = [
-  { name: 'learn about ethereum', isPage: true, link: '/learn-about' },
-  { name: 'run your own node', isPage: true, link: '/videos' },
-  { name: 'maintain your own node', isPage: true, link: '/videos' },
+  { name: 'overview', isPage: true, link: '/overview' },
+  { name: 'ethereum staking', isPage: true, link: '/ethereum-staking' },
+  { name: 'run your own node', isPage: true, link: '/run-your-own-node' },
+  { name: 'maintain your node', isPage: true, link: '/maintain-your-node' },
   { name: 'contact', isPage: false, contentElem: contactContentElem },
 ];
 

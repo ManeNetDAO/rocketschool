@@ -19,24 +19,22 @@ export const contributorsHeading: Array<Line> = [
 export const homePageCards = [
   {
     svg: 'ethereum' as const,
-    title: 'Learn about Ethereum',
-    about:
-      'Learn about Ethereum, Rocket Pool, running a node, maintaining a node. We will guide you through the technical',
-    pointer: { text: 'Watch our Guides', link: '/ethereum' },
+    title: 'Learn about Ethereum Staking',
+    about: 'Learn about the Ethereum and Rocket Pool staking basics.',
+    pointer: { text: 'Watch our Video Lessons', link: '/ethereum-staking' },
   },
   {
     svg: 'nodes' as const,
-    title: 'Run your own node',
-    about:
-      'Learn about Ethereum, Rocket Pool, running a node, maintaining a node. We will guide you through the technical',
-    pointer: { text: 'Watch our Guides', link: '/nodes' },
+    title: 'Run Your Own Node',
+    about: 'Learn how to set up a Rocket Pool node and minipool',
+    pointer: { text: 'Watch our Video Lessons', link: '/run-your-own-node' },
   },
   {
     svg: 'wrench' as const,
-    title: 'Maintain your own node',
+    title: 'Maintain Your Node',
     about:
-      'Learn about Ethereum, Rocket Pool, running a node, maintaining a node. We will guide you through the technical',
-    pointer: { text: 'Watch our Guides', link: '/wrench' },
+      'Learn how to claim rewards and monitor and maintain your Rocket Pool node.',
+    pointer: { text: 'Watch our Video Lessons', link: '/maintain-your-node' },
   },
 ];
 

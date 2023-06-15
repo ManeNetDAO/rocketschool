@@ -1,7 +1,7 @@
 import { Line } from '@/components/molecules/ColorHeading/ColorHeading';
 import { GridCards } from '@/components/organisms/CardGrid/CardGrid';
 
-export const primaryHeading = 'Learn About Ethereum';
+export const primaryHeading = 'Rocket School Overview';
 
 export const firstHeading: Array<Line> = [
   [
@@ -13,17 +13,16 @@ export const firstHeading: Array<Line> = [
 
 export const secondHeading: Array<Line> = [
   [
-    { text: 'Learn About\u00A0', color: 'black' },
-    { text: 'Rocket Pool', color: 'orange' },
+    { text: 'Learn About Node\u00A0', color: 'black' },
+    { text: 'Operation', color: 'orange' },
   ],
 ];
 
 export const thirdHeading: Array<Line> = [
   [
-    { text: 'Learn About\u00A0', color: 'black' },
-    { text: 'Running Your', color: 'orange' },
+    { text: 'Learn About Node\u00A0', color: 'black' },
+    { text: 'Maintenance', color: 'orange' },
   ],
-  [{ text: 'Own Node', color: 'orange' }],
 ];
 
 export const paragraph =

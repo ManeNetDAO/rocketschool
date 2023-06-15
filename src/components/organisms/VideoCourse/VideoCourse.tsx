@@ -48,7 +48,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
   return (
     <Flex padding={'0 0 100px 0'}>
       <ColumnList
-        title={'All The Videos'}
+        title={'Video Lessons'}
         list={videos}
         selectedIndex={selectedIndex}
         setSelected={handleChange}
