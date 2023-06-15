@@ -28,30 +28,16 @@ export const Hero = () => {
         home and how to optimize your setup.
       </Text>
       <Flex>
-        <Button
-          as={'a'}
-          margin={'0 12px 0 0'}
-          href='/ethereum-staking'
-        >
+        <Button as={'a'} margin={'0 12px 0 0'} href="/ethereum-staking">
           Get started
         </Button>
         <Desktop>
-          <Button
-            as={'a'}
-            isLight
-            padding={'10px 40px'}
-            href={'/overview'}
-          >
+          <Button as={'a'} isLight padding={'10px 40px'} href={'/overview'}>
             What will I learn?
           </Button>
         </Desktop>
         <Mobile>
-          <Button
-            as={'a'}
-            isLight
-            padding={'10px 40px'}
-            href={'/overview'}
-          >
+          <Button as={'a'} isLight padding={'10px 40px'} href={'/overview'}>
             Overview
           </Button>
         </Mobile>

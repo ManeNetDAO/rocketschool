@@ -8,9 +8,9 @@ export const outsideLinks = {
 type NavigationElem = {
   name: string;
 } & (
-    | { isPage: true; link: string }
-    | { isPage: false; contentElem: ReactNode }
-  );
+  | { isPage: true; link: string }
+  | { isPage: false; contentElem: ReactNode }
+);
 
 const contactContentElem = (
   <div>

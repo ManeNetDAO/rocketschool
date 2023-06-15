@@ -20,15 +20,13 @@ export const homePageCards = [
   {
     svg: 'ethereum' as const,
     title: 'Learn about Ethereum Staking',
-    about:
-      'Learn about the Ethereum and Rocket Pool staking basics.',
+    about: 'Learn about the Ethereum and Rocket Pool staking basics.',
     pointer: { text: 'Watch our Video Lessons', link: '/ethereum-staking' },
   },
   {
     svg: 'nodes' as const,
     title: 'Run Your Own Node',
-    about:
-      'Learn how to set up a Rocket Pool node and minipool',
+    about: 'Learn how to set up a Rocket Pool node and minipool',
     pointer: { text: 'Watch our Video Lessons', link: '/run-your-own-node' },
   },
   {

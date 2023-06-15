@@ -11,8 +11,7 @@ export const videos: Array<ElemData> = [
   },
   {
     title: '2.2 Preparing a Local Node',
-    about:
-      'Set up your hardware and operating system',
+    about: 'Set up your hardware and operating system',
     url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
   },
   {
@@ -47,8 +46,7 @@ export const videos: Array<ElemData> = [
   },
   {
     title: '2.8 Creating the Node Wallet',
-    about:
-      'Create your node wallet',
+    about: 'Create your node wallet',
     url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
   },
   {
@@ -59,8 +57,7 @@ export const videos: Array<ElemData> = [
   },
   {
     title: '2.10 Opting into the Smoothing Pool and MEV',
-    about:
-      'Join the smoothing pool, and activate and configure MEV-Boost',
+    about: 'Join the smoothing pool, and activate and configure MEV-Boost',
     url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
   },
   {
