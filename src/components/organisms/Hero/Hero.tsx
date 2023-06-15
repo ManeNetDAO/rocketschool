@@ -23,20 +23,36 @@ export const Hero = () => {
         maxWidth={'570px'}
         lineHeight={'29px'}
       >
-        Learn about Ethereum, Rocket Pool, running a node, maintaining a node.
+        Learn about Ethereum, staking, and becoming a Rocket Pool node operator.
         We will guide you through the technical details of running a node at
         home and how to optimize your setup.
       </Text>
       <Flex>
-        <Button margin={'0 12px 0 0'}>Get started</Button>
+        <Button
+          as={'a'}
+          margin={'0 12px 0 0'}
+          href='/ethereum-staking'
+        >
+          Get started
+        </Button>
         <Desktop>
-          <Button isLight padding={'10px 40px'}>
-            What is Rocket School?
+          <Button
+            as={'a'}
+            isLight
+            padding={'10px 40px'}
+            href={'/overview'}
+          >
+            What will I learn?
           </Button>
         </Desktop>
         <Mobile>
-          <Button isLight padding={'10px 40px'}>
-            About us
+          <Button
+            as={'a'}
+            isLight
+            padding={'10px 40px'}
+            href={'/overview'}
+          >
+            Overview
           </Button>
         </Mobile>
       </Flex>

@@ -43,6 +43,7 @@ export const HomePage = () => {
           height={'440px'}
           mobileWidth={'90%'}
         />
+        {/*
         <H2
           fontWeight={700}
           fontSize={'46px'}
@@ -55,6 +56,7 @@ export const HomePage = () => {
           </Text>
           <Button>Get started</Button>
         </H2>
+      */}
       </Flex>
       <Section padding={'55px 100px'} mobilePadding={'25px 0 25px 25px'}>
         <Cards />
