@@ -9,6 +9,7 @@ export const Mobile = styled.div`
 `;
 
 export const Desktop = styled.div`
+  display: flex;
   ${mediaQueries.mobile} {
     display: none;
   }
