@@ -6,7 +6,7 @@ import { About } from '@/components/templates/About/About';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = allPages.map((page, index) => ({
-    params: { slug: page.name, id: index.toString() },
+    params: { slug: page.name },
   }));
 
   return { paths, fallback: false };

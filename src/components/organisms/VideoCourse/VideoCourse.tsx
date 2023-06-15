@@ -1,11 +1,28 @@
 import { useRouter } from 'next/router';
 import React, { useState, useCallback, useEffect } from 'react';
-import { Flex, LazyVideo, Text, Button, Absolute } from '@/components/atoms';
+import styled from 'styled-components';
+import {
+  Flex,
+  LazyVideo,
+  Text,
+  Button,
+  Absolute,
+  Desktop,
+  Mobile,
+} from '@/components/atoms';
 import {
   ColumnList,
   ElemData,
 } from '@/components/molecules/ColumnList/ColumnList';
 import { Loader } from '@/components/atoms/Loader/Loader';
+import { mediaQueries } from '@/constants/mediaQueries';
+
+const CourseContainer = styled(Flex)`
+  padding: 0 0 100px 0;
+  ${mediaQueries.mobile} {
+    flex-direction: column;
+  }
+`;
 
 export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
   const { push, query, isReady } = useRouter();
@@ -45,14 +62,18 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
     [push, selectedIndex, slug]
   );
 
+  const columnList = (
+    <ColumnList
+      title={'Video Lessons'}
+      list={videos}
+      selectedIndex={selectedIndex}
+      setSelected={handleChange}
+    />
+  );
+
   return (
-    <Flex padding={'0 0 100px 0'}>
-      <ColumnList
-        title={'Video Lessons'}
-        list={videos}
-        selectedIndex={selectedIndex}
-        setSelected={handleChange}
-      />
+    <CourseContainer>
+      <Desktop>{columnList}</Desktop>
       <Flex flexDirection={'column'} position={'relative'}>
         {!iframeLoaded && queryIsReady && (
           <Absolute left={'50%'} centered top={'30%'}>
@@ -66,6 +87,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
               src={videos[selectedIndex].url}
               width={'834px'}
               height={'500px'}
+              mobileWidth={'100%'}
               borderRadius={'32px'}
             />
             <Flex
@@ -73,7 +95,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
               alignItems={'center'}
               margin={'28px 0 0 0'}
             >
-              <Text fontWeight={700} fontSize={'28px'}>
+              <Text fontWeight={700} fontSize={'28px'} mobileSize={'20px'}>
                 {videos[selectedIndex].title}
               </Text>
               <Flex>
@@ -98,6 +120,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
           </React.Fragment>
         )}
       </Flex>
-    </Flex>
+      <Mobile>{columnList}</Mobile>
+    </CourseContainer>
   );
 };

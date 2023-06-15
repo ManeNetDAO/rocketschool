@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Flex, Text } from '@/components/atoms';
 import { colors } from '@/constants/styles';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 const Card = styled(Flex)`
   width: 305px;
@@ -9,6 +10,9 @@ const Card = styled(Flex)`
   border-radius: 14px;
   flex-direction: column;
   white-space: normal;
+  ${mediaQueries.mobile} {
+    width: 200px;
+  }
 `;
 
 export type GridCards = Array<{

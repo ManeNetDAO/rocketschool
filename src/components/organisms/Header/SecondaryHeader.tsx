@@ -14,6 +14,7 @@ export const SecondaryHeader = ({ title }: { title: string }) => {
         <H1
           color={colors.text.white}
           fontSize={'46px'}
+          mobileSize={'32px'}
           fontWeight={700}
           textAlign={'center'}
           padding={'86px 0 0 0'}
