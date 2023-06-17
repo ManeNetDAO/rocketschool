@@ -17,7 +17,9 @@ const contactContentElem = (
     <Text display={'inline'}>
       Contact us at the #public-rocket-school channel of our{' '}
     </Text>
-    <Anchor href={outsideLinks.discord}>discord</Anchor>
+    <Anchor textDecoration={'underline'} href={outsideLinks.discord}>
+      discord
+    </Anchor>
     <Text display={'inline'}>.</Text>
   </div>
 );

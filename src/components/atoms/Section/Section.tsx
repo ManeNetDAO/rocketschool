@@ -9,7 +9,9 @@ export const Section = styled.section<{
   backgroundSize?: string;
   width?: string;
   height?: string;
+  position?: string;
   mobilePadding?: string;
+  mobileBGImage?: string;
 }>`
   ${({ display }) => display && `display: ${display};`}
   ${({ width }) => width && `width: ${width};`}
@@ -17,6 +19,7 @@ export const Section = styled.section<{
   ${({ justifyContent }) =>
     justifyContent && `justify-content: ${justifyContent};`}
   ${({ padding }) => padding && `padding: ${padding};`}
+  ${({ position }) => position && `position: ${position};`}
 
   ${({ backgroundImage }) =>
     backgroundImage &&
@@ -32,6 +35,15 @@ export const Section = styled.section<{
     `
     ${mediaQueries.mobile} {
       padding: ${mobilePadding};
+  }
+  `}
+
+  ${({ mobileBGImage }) =>
+    mobileBGImage &&
+    `
+    ${mediaQueries.mobile} {
+      background-image: ${mobileBGImage};
+      background-size: cover;
   }
   `}
 `;

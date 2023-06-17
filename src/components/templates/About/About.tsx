@@ -69,7 +69,7 @@ export const About = (x: Props) => {
               <ColorHeading
                 fontSize={'48px'}
                 lines={firstHeading}
-                mobileSize={'26px'}
+                mobileSize={'31px'}
               />
             </h2>
             <Text
@@ -127,7 +127,7 @@ export const About = (x: Props) => {
               <ColorHeading
                 fontSize={'48px'}
                 lines={secondHeading}
-                mobileSize={'26px'}
+                mobileSize={'31px'}
               />
             </H2>
             <CardGrid gridCards={firstGrid} />
@@ -148,7 +148,7 @@ export const About = (x: Props) => {
               <ColorHeading
                 fontSize={'48px'}
                 lines={thirdHeading}
-                mobileSize={'26px'}
+                mobileSize={'31px'}
               />
             </H2>
             <CardGrid gridCards={secondGrid} />

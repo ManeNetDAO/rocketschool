@@ -49,6 +49,8 @@ const DesktopFlex = styled(Flex)`
   }
 `;
 
+const contact = navigation.find((n) => n.name === 'contact' && !n.isPage);
+
 export const Footer = () => {
   const [modalContent, setModal] = useState<ReactNode | null>(null);
 
@@ -113,7 +115,7 @@ export const Footer = () => {
               margin={'12px 0 0 0'}
               isLight
               onClick={() =>
-                setModal(!navigation[3].isPage && navigation[3].contentElem)
+                contact?.isPage === false && setModal(contact.contentElem)
               }
             >
               Request Content

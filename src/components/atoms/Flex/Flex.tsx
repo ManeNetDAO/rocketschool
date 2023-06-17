@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { mediaQueries } from '@/constants/mediaQueries';
 export const Flex = styled.div<{
   justifyContent?: string;
   alignItems?: string;
   flexDirection?: string;
+  flexWrap?: string;
   margin?: string;
   padding?: string;
   height?: string;
@@ -10,6 +12,8 @@ export const Flex = styled.div<{
   gap?: string;
   whiteSpace?: string;
   position?: string;
+  flex?: number;
+  mobilePadding?: string;
 }>`
   display: flex;
 
@@ -18,6 +22,7 @@ export const Flex = styled.div<{
     justifyContent && `justify-content: ${justifyContent};`}
   ${({ alignItems }) => alignItems && `align-items: ${alignItems};`}
   ${({ gap }) => gap && `gap: ${gap};`}
+  ${({ flexWrap }) => flexWrap && `flex-wrap: ${flexWrap};`}
 
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ padding }) => padding && `padding: ${padding};`}
@@ -26,4 +31,13 @@ export const Flex = styled.div<{
 
   ${({ whiteSpace }) => whiteSpace && `white-space: ${whiteSpace};`}
   ${({ position }) => position && `position: ${position};`}
+  ${({ flex }) => flex && `flex: ${flex};`}
+
+  ${({ mobilePadding }) =>
+    mobilePadding &&
+    `
+    ${mediaQueries.mobile} {
+      padding: ${mobilePadding};
+  }
+  `}
 `;

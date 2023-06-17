@@ -74,9 +74,15 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
   return (
     <CourseContainer>
       <Desktop>{columnList}</Desktop>
-      <Flex flexDirection={'column'} position={'relative'}>
+      <Flex
+        flexDirection={'column'}
+        position={'relative'}
+        flex={1}
+        padding={'0 160px 0 0'}
+        mobilePadding={'0'}
+      >
         {!iframeLoaded && queryIsReady && (
-          <Absolute left={'50%'} centered top={'30%'}>
+          <Absolute left={'42%'} centered top={'30%'}>
             <Loader />
           </Absolute>
         )}
@@ -85,7 +91,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
             <LazyVideo
               onLoad={setLoadedTrue}
               src={videos[selectedIndex].url}
-              width={'834px'}
+              width={'100%'}
               height={'500px'}
               mobileWidth={'100%'}
               borderRadius={'32px'}

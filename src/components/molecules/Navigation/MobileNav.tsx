@@ -22,6 +22,7 @@ const NavbarMenu = styled.div`
   }
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   position: absolute;
   top: 4rem;
   left: 0;

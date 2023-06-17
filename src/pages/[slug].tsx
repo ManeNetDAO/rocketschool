@@ -5,7 +5,7 @@ import { Videos } from '@/components/templates/Videos/Videos';
 import { About } from '@/components/templates/About/About';
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = allPages.map((page, index) => ({
+  const paths = allPages.map((page) => ({
     params: { slug: page.name },
   }));
 

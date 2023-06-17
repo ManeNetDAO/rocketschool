@@ -8,16 +8,16 @@ import { Flex, Anchor } from '@/components/atoms';
 import { mediaQueries } from '@/constants/mediaQueries';
 import { Modal } from '@/components/molecules/Modal/Modal';
 
-const StyledHeader = styled.header`
+const StyledHeader = styled.header<{ padding?: string }>`
+  ${({ padding }) => padding && `padding: ${padding};`}
+
   .logo-container {
     position: relative;
     width: 124px;
     height: 24px;
   }
-  padding-left: 50px;
-  ${mediaQueries.desktop} {
-    padding-left: 0;
 
+  ${mediaQueries.desktop} {
     .logo-container {
       width: 248px;
       height: 48px;
@@ -25,11 +25,17 @@ const StyledHeader = styled.header`
   }
 `;
 
-export const Header = ({ children }: { children?: ReactNode }) => {
+export const Header = ({
+  children,
+  padding,
+}: {
+  children?: ReactNode;
+  padding?: string;
+}) => {
   const [modalContent, setModal] = useState<ReactNode | null>(null);
 
   return (
-    <StyledHeader>
+    <StyledHeader padding={padding}>
       <Flex justifyContent={'space-between'}>
         <Anchor href={'/'}>
           <div className={'logo-container'}>
