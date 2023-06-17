@@ -3,7 +3,14 @@ import { Contributors } from '@/components/molecules/Contributors/Contributors';
 import { contributors } from '@/content/contributors';
 import { Cards } from '@/components/organisms/HomePageCards/Cards';
 import { Hero } from '@/components/organisms/Hero/Hero';
-import { LazyVideo, Flex, Section, Desktop } from '@/components/atoms';
+import {
+  LazyVideo,
+  Flex,
+  Section,
+  Desktop,
+  Box,
+  Absolute,
+} from '@/components/atoms';
 import { Footer } from '@/components/organisms/Footer/Footer';
 import { videoUrl } from '@/content/homePage';
 import Image from 'next/image';
@@ -14,17 +21,22 @@ export const HomePage = () => {
     <div>
       <main>
         <Section
-          backgroundImage={'url(/images/home-hero.jpeg)'}
-          backgroundSize={'cover'}
           height={'851px'}
-          padding={'20px 100px'}
-          mobilePadding={'20px 30px'}
+          position={'relative'}
+          mobileBGImage={'url(/images/home-hero.jpeg)'}
         >
+          <Absolute zIndex={-1} width={'100%'} height={'100%'}>
+            <Desktop>
+              <Image src={'/images/home-hero.jpeg'} alt={''} fill={true} />
+            </Desktop>
+          </Absolute>
           <Desktop>
             <AnimatedImage src={'images/hero_shapes.png'} height={'300px'} />
           </Desktop>
-          <Header />
-          <Hero />
+          <Box padding={'20px 100px'} mobilePadding={'20px 30px'}>
+            <Header padding={'0 0 0 50px'} />
+            <Hero />
+          </Box>
         </Section>
       </main>
       <Flex flexDirection={'column'} alignItems={'center'}>

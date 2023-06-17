@@ -16,7 +16,7 @@ export const ColorHeading = ({ lines, fontSize, mobileSize }: Props) => {
   return (
     <React.Fragment>
       {lines.map((l, i) => (
-        <Flex key={i}>
+        <Flex key={i} whiteSpace={'nowrap'} flexWrap={'wrap'}>
           {l.map((t) => (
             <Text
               key={t.text}

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Flex, H2, Text } from '@/components/atoms';
 import { colors } from '@/constants/styles';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export type ElemData = {
   title: string;
@@ -16,6 +17,7 @@ type Props = {
 };
 
 const Container = styled(Flex)`
+  flex-direction: column;
   height: 648px;
   width: 340px;
   overflow: hidden;
@@ -34,6 +36,16 @@ const Container = styled(Flex)`
   //firefox
   scrollbar-color: ${colors.text.orange} ${colors.image.blue};
   scrollbar-width: thin;
+
+  ${mediaQueries.mobile} {
+    overflow-x: scroll;
+    flex-direction: row;
+    width: inherit;
+    padding-top: 20px;
+    margin-top: 8px;
+    border-top: 1px solid #d5d5d5;
+    border-right: none;
+  }
 `;
 
 const Elem = styled.div`
@@ -44,6 +56,11 @@ const Elem = styled.div`
     border-left: none;
   }
   cursor: pointer;
+
+  ${mediaQueries.mobile} {
+    border-left: none;
+    min-width: 200px;
+  }
 `;
 
 const ListNumber = styled.div<{ isSelected: boolean }>`
@@ -70,11 +87,7 @@ export const ColumnList = ({
   setSelected,
 }: Props) => {
   return (
-    <Container
-      flexDirection={'column'}
-      padding={'0 0 0 32px'}
-      margin={'0 0 0 30px'}
-    >
+    <Container padding={'0 0 0 32px'} margin={'0 0 0 30px'}>
       <H2 fontSize={'21px'} fontWeight={700} margin={'0 0 26px 0'}>
         {title}
       </H2>

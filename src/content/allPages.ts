@@ -1,3 +1,4 @@
+//note these are all the *content* pages, the exception only being the home page
 export const allPages: Array<{
   type: 'videos' | 'about';
   name: string;

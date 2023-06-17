@@ -1,4 +1,12 @@
-import { Flex, H2, Text, Button, Section, SVG } from '@/components/atoms';
+import {
+  Flex,
+  H2,
+  Text,
+  Button,
+  Section,
+  SVG,
+  Desktop,
+} from '@/components/atoms';
 import { Footer } from '@/components/organisms/Footer/Footer';
 import Image from 'next/image';
 import {
@@ -61,7 +69,7 @@ export const About = (x: Props) => {
               <ColorHeading
                 fontSize={'48px'}
                 lines={firstHeading}
-                mobileSize={'32px'}
+                mobileSize={'31px'}
               />
             </h2>
             <Text
@@ -91,12 +99,14 @@ export const About = (x: Props) => {
               Watch Video Series
             </Button>
           </Flex>
-          <Image
-            src={firstImage}
-            alt={'ETH Staking'}
-            width={406}
-            height={406}
-          />
+          <Desktop>
+            <Image
+              src={firstImage}
+              alt={'ETH Staking'}
+              width={406}
+              height={406}
+            />
+          </Desktop>
         </Section>
 
         <Section
@@ -104,19 +114,20 @@ export const About = (x: Props) => {
           justifyContent={'space-between'}
           padding={'0 0 118px 0'}
         >
-          <Image
-            src={secondImage}
-            alt={'ETH Staking'}
-            width={406}
-            height={406}
-          />
-
+          <Desktop>
+            <Image
+              src={secondImage}
+              alt={'ETH Staking'}
+              width={406}
+              height={406}
+            />
+          </Desktop>
           <Flex flexDirection={'column'} alignItems={'flex-start'}>
             <H2 margin={'0 0 46px'}>
               <ColorHeading
                 fontSize={'48px'}
                 lines={secondHeading}
-                mobileSize={'32px'}
+                mobileSize={'31px'}
               />
             </H2>
             <CardGrid gridCards={firstGrid} />
@@ -137,7 +148,7 @@ export const About = (x: Props) => {
               <ColorHeading
                 fontSize={'48px'}
                 lines={thirdHeading}
-                mobileSize={'32px'}
+                mobileSize={'31px'}
               />
             </H2>
             <CardGrid gridCards={secondGrid} />
@@ -150,13 +161,14 @@ export const About = (x: Props) => {
               Watch Video Series
             </Button>
           </Flex>
-
-          <Image
-            src={thirdImage}
-            alt={'ETH Staking'}
-            width={406}
-            height={406}
-          />
+          <Desktop>
+            <Image
+              src={thirdImage}
+              alt={'ETH Staking'}
+              width={406}
+              height={406}
+            />
+          </Desktop>
         </Section>
       </Main>
 
