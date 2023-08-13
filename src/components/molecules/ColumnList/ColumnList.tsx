@@ -41,6 +41,7 @@ const Container = styled(Flex)`
     overflow-x: scroll;
     flex-direction: row;
     width: inherit;
+    height: inherit;
     padding-top: 20px;
     margin-top: 8px;
     border-top: 1px solid #d5d5d5;
