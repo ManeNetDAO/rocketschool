@@ -34,7 +34,7 @@ export const SecondaryHeader = ({ title }: { title: string }) => {
             mobileSize={'32px'}
             fontWeight={700}
             textAlign={'center'}
-            padding={'86px 0 0 0'}
+            padding={'30px 0 0 0'}
           >
             {title}
           </H1>

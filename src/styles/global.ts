@@ -69,4 +69,8 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  iframe{
+    border-radius: 32px;
+  }
+
 `;

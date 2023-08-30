@@ -18,7 +18,7 @@ import { Loader } from '@/components/atoms/Loader/Loader';
 import { mediaQueries } from '@/constants/mediaQueries';
 
 const CourseContainer = styled(Flex)`
-  padding: 0 0 100px 0;
+  padding: 0 20px 100px 0;
   ${mediaQueries.mobile} {
     flex-direction: column;
   }

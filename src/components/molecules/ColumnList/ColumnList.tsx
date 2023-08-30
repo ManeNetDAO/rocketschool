@@ -38,8 +38,7 @@ const Container = styled(Flex)`
   scrollbar-width: thin;
 
   ${mediaQueries.mobile} {
-    overflow-x: scroll;
-    flex-direction: row;
+    flex-direction: column;
     width: inherit;
     height: inherit;
     padding-top: 20px;

@@ -4,14 +4,14 @@ import { homePageCards } from '@/content/homePage';
 import { Card } from '@/components/molecules/Card/Card';
 import { Flex } from '@/components/atoms';
 
-const CardsWrapper = styled(Flex)`
-  overflow-y: scroll;
+const CardsWrapper = styled.div`
+    flex-wrap: wrap;
 `;
 
 export const Cards = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <CardsWrapper gap={'5%'}>
+    <CardsWrapper gap={'20px'} flexWrap={'wrap'}>
       {homePageCards.map(({ svg, about, title, pointer }, index) => {
         return (
           <Card

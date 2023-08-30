@@ -21,7 +21,7 @@ export const HomePage = () => {
     <div>
       <main>
         <Section
-          height={'851px'}
+          height={'730px'}
           position={'relative'}
           mobileBGImage={'url(/images/home-hero.jpeg)'}
         >
@@ -47,7 +47,7 @@ export const HomePage = () => {
           mobileWidth={'90%'}
         />
       </Flex>
-      <Section padding={'55px 100px'} mobilePadding={'25px 0 25px 25px'}>
+      <Section padding={'55px 100px'} mobilePadding={'25px'}>
         <Cards />
       </Section>
       <Section

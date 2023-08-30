@@ -13,7 +13,7 @@ const Card = styled(Flex)`
   white-space: normal;
   ${mediaQueries.mobile} {
     width: 50%;
-    padding: 24px 8px;
+    padding: 20px 18px;
   }
 `;
 

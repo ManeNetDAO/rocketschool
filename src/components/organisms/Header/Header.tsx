@@ -13,14 +13,16 @@ const StyledHeader = styled.header<{ padding?: string }>`
 
   .logo-container {
     position: relative;
-    width: 124px;
-    height: 24px;
+    width: 217px;
+    height: 42px;
+    margin-left: 5px;
   }
 
   ${mediaQueries.desktop} {
     .logo-container {
       width: 248px;
       height: 48px;
+      margin-left: 0;
     }
   }
 `;

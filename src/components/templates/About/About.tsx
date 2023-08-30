@@ -57,7 +57,7 @@ export const About = (x: Props) => {
       <Main>
         <Section
           display={'flex'}
-          padding={'0 0 129px 0'}
+          padding={'0 0 50px 0'}
           justifyContent={'space-between'}
         >
           <Flex
@@ -92,7 +92,7 @@ export const About = (x: Props) => {
             ))}
             <Button
               as={'a'}
-              margin={'37px 0 0 0'}
+              margin={'40px 0 0 0'}
               alignSelf={'center'}
               href={firstVideoLink}
             >
@@ -133,7 +133,7 @@ export const About = (x: Props) => {
             <CardGrid gridCards={firstGrid} />
             <Button
               as={'a'}
-              margin={'37px 0 0 0'}
+              margin={'40px 0 0 0'}
               alignSelf={'center'}
               href={secondVideoLink}
             >
@@ -154,7 +154,7 @@ export const About = (x: Props) => {
             <CardGrid gridCards={secondGrid} />
             <Button
               as={'a'}
-              margin={'37px 0 0 0'}
+              margin={'40px 0 0 0'}
               alignSelf={'center'}
               href={thirdVideoLink}
             >

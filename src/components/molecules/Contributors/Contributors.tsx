@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   display: inline-flex;
   flex-direction: column;
   border: 1px solid #fccfbc;
+  width: calc(100vw - 30px);
+  min-width: 320px;
+  max-width: 420px;
   border-radius: 17px;
 `;
 
@@ -52,7 +55,7 @@ type Props = {
 
 export const AboutText = styled(Text)`
   ${mediaQueries.mobile} {
-    width: 280px;
+    width: 240px;
   }
 `;
 
@@ -89,9 +92,8 @@ export const Contributors = ({ contributors }: Props) => {
               />
               <Box
                 margin={'0 0 0 16px'}
-                height={'70px'}
                 width={'420px'}
-                mobileWidth={'324px'}
+                mobileWidth={'100vw'}
               >
                 {link ? (
                   <Anchor
@@ -116,7 +118,7 @@ export const Contributors = ({ contributors }: Props) => {
                   fontWeight={400}
                   color={selectedIndex === index ? '#FFFFFF' : ''}
                   margin={'5px 0 0 0'}
-                  width={'385px'}
+                  width={'100%'}
                 >
                   {text}
                 </AboutText>

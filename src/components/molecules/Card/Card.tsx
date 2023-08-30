@@ -18,7 +18,7 @@ export type Props = {
 const Container = styled.a<{ isSelected: boolean }>`
   padding: 24px;
   border-radius: 14px;
-  box-shadow: -7.89216px 5.63725px 43.9706px rgba(0, 0, 0, 0.1);
+  box-shadow: -20px 4px 43.9706px rgba(0, 0, 0, 0.1);
   min-width: 170px;
 
   ${({ isSelected }) =>
