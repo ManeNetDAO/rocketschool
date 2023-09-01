@@ -6,12 +6,14 @@ import { Flex } from '@/components/atoms';
 
 const CardsWrapper = styled.div`
   flex-wrap: wrap;
+  gap: 20px;
 `;
 
 export const Cards = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  /* gap={'20px'} flexWrap={'wrap'}*/
   return (
-    <CardsWrapper gap={'20px'} flexWrap={'wrap'}>
+    <CardsWrapper>
       {homePageCards.map(({ svg, about, title, pointer }, index) => {
         return (
           <Card
