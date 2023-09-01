@@ -5,7 +5,7 @@ import { Card } from '@/components/molecules/Card/Card';
 import { Flex } from '@/components/atoms';
 
 const CardsWrapper = styled.div`
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 `;
 
 export const Cards = () => {

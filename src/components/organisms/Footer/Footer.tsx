@@ -35,7 +35,7 @@ const MobileFlex = styled(Flex)`
     padding: 20px;
     font-size: 12px;
 
-    .footer-nav{
+    .footer-nav {
       flex-direction: column;
     }
   }
@@ -73,7 +73,12 @@ export const Footer = () => {
           <Absolute top={'-38px'} zIndex={2} left={'49.6%'} centered>
             <SVG name={'rocket'} width={45} height={95} />
           </Absolute>
-          <Image src={'/images/clouds-tp.png'} alt={''} fill={true} objectFit={'cover'}/>
+          <Image
+            src={'/images/clouds-tp.png'}
+            alt={''}
+            fill={true}
+            objectFit={'cover'}
+          />
         </Box>
         <MobileFlex padding={'60px 120px 40px 120px'}>
           <Flex flexDirection={'column'}>
@@ -126,7 +131,11 @@ export const Footer = () => {
             </Button>
           </DesktopFlex>
         </MobileFlex>
-        <MobileFlex flexDirection={'column'} justifyContent={'space-between'} padding={'0 120px'}>
+        <MobileFlex
+          flexDirection={'column'}
+          justifyContent={'space-between'}
+          padding={'0 120px'}
+        >
           <LeftText fontSize={'14px'} color={colors.text.white}>
             {footer.disclaimer}
           </LeftText>
@@ -138,10 +147,11 @@ export const Footer = () => {
             >
               Privacy Policy
             </Anchor>
-            <Anchor 
-              fontSize={'14px'} 
+            <Anchor
+              fontSize={'14px'}
               color={colors.text.white}
-              margin={'20px 0 0'}>
+              margin={'20px 0 0'}
+            >
               Terms of Service
             </Anchor>
           </Flex>

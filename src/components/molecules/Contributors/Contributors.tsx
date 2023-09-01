@@ -90,11 +90,7 @@ export const Contributors = ({ contributors }: Props) => {
                 height={70}
                 style={{ borderRadius: '50%' }}
               />
-              <Box
-                margin={'0 0 0 16px'}
-                width={'420px'}
-                mobileWidth={'100vw'}
-              >
+              <Box margin={'0 0 0 16px'} width={'420px'} mobileWidth={'100vw'}>
                 {link ? (
                   <Anchor
                     href={link}
