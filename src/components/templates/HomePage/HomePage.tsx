@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
     height: 851px;
   }
   ${mediaQueries.mobile} {
-    height: 720px;
+    height: 730px;
   }
 `;
 
