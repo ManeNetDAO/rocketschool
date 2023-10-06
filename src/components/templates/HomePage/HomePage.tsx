@@ -21,6 +21,7 @@ import styled from 'styled-components';
 const HeaderWrapper = styled.div`
   background-image: url(/images/home-hero.jpeg);
   position: relative;
+  background-size: cover;
   ${mediaQueries.desktop} {
     height: 851px;
   }
