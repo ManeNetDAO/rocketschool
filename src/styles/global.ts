@@ -83,4 +83,15 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .hero{
+	margin: 150px 0 0 0;
+	${mediaQueries.desktop} {
+		padding-top: 86px;
+	}
+  }
+
+  .hero h1{
+	padding-top: 0;
+  }
+
 `;

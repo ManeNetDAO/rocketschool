@@ -5,7 +5,7 @@ import { heroLines } from '@/content/homePage';
 
 export const Hero = () => {
   return (
-    <Flex flexDirection={'column'} margin={'230px 0 0 0'}>
+    <Flex flexDirection={'column'} className={'hero'}>
       <Text
         color={colors.text.orange}
         fontSize={'16px'}
