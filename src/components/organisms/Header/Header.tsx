@@ -20,8 +20,8 @@ const StyledHeader = styled.header<{ padding?: string }>`
 
   ${mediaQueries.desktop} {
     .logo-container {
-      width: 248px;
-      height: 48px;
+      width: 200px;
+      height: 39px;
       margin-left: 0;
     }
   }
