@@ -19,7 +19,7 @@ const Container = styled.a<{ isSelected: boolean }>`
   padding: 24px;
   border-radius: 14px;
   box-shadow: -20px 4px 43.9706px rgba(0, 0, 0, 0.1);
-  min-width: 170px;
+  min-width: 240px;
 
   ${({ isSelected }) =>
     isSelected &&
