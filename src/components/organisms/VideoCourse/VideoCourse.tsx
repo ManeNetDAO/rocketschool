@@ -103,7 +103,12 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
               margin={'28px 0 0 0'}
               flexWrap={'wrap'}
             >
-              <Text fontWeight={700} fontSize={'28px'} mobileSize={'20px'} margin={'0 0 28px'}>
+              <Text
+                fontWeight={700}
+                fontSize={'28px'}
+                mobileSize={'20px'}
+                margin={'0 0 28px'}
+              >
                 {videos[selectedIndex].title}
               </Text>
               <Flex margin={'0 0 28px'} flexWrap={'wrap'} gap={'12px'}>
@@ -116,9 +121,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
                   </Button>
                 )}
                 {videos.length - 1 !== selectedIndex && (
-                  <Button
-                    onClick={() => handleChange(selectedIndex + 1)}
-                  >
+                  <Button onClick={() => handleChange(selectedIndex + 1)}>
                     Next Video
                   </Button>
                 )}
