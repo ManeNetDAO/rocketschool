@@ -5,13 +5,17 @@ import { Card } from '@/components/molecules/Card/Card';
 import { Flex } from '@/components/atoms';
 
 const CardsWrapper = styled.div`
+  display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  
+  a{
+    flex: 1 1 30%;
+  }
 `;
 
 export const Cards = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  /* gap={'20px'} flexWrap={'wrap'}*/
   return (
     <CardsWrapper>
       {homePageCards.map(({ svg, about, title, pointer }, index) => {

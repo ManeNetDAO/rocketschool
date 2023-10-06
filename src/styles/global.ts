@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -70,7 +71,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   iframe{
-    border-radius: 32px;
+    border-radius: 3px;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  h1{
+    padding-top: 30px;
+    ${mediaQueries.desktop} {
+      padding-top: 86px;
+    }
   }
 
 `;

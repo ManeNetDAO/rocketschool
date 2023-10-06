@@ -15,16 +15,25 @@ import { Footer } from '@/components/organisms/Footer/Footer';
 import { videoUrl } from '@/content/homePage';
 import Image from 'next/image';
 import { AnimatedImage } from '@/components/molecules/AnimatedImage/AnimatedImage';
+import { mediaQueries } from '@/constants/mediaQueries';
+import styled from 'styled-components';
+
+const HeaderWrapper = styled.div`
+  background-image: url(/images/home-hero.jpeg);
+  position: relative;
+  ${mediaQueries.desktop} {
+    height: 851px;
+  }
+  ${mediaQueries.mobile} {
+    height: 720px;
+  }
+`;
 
 export const HomePage = () => {
   return (
     <div>
       <main>
-        <Section
-          height={'730px'}
-          position={'relative'}
-          mobileBGImage={'url(/images/home-hero.jpeg)'}
-        >
+        <HeaderWrapper>
           <Absolute zIndex={-1} width={'100%'} height={'100%'}>
             <Desktop>
               <Image src={'/images/home-hero.jpeg'} alt={''} fill={true} />
@@ -37,13 +46,13 @@ export const HomePage = () => {
             <Header padding={'0 0 0 50px'} />
             <Hero />
           </Box>
-        </Section>
+        </HeaderWrapper>
       </main>
       <Flex flexDirection={'column'} alignItems={'center'}>
         <LazyVideo
           src={videoUrl}
           width={'45%'}
-          height={'440px'}
+          height={'100%'}
           mobileWidth={'90%'}
         />
       </Flex>
@@ -61,7 +70,7 @@ export const HomePage = () => {
           src={'/images/rightRocketCol.png'}
           alt={''}
           width={600}
-          height={893}
+          height={750}
           style={{ position: 'relative', bottom: '150px' }}
         />
       </Section>

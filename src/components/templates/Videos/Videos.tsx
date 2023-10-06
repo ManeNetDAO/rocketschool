@@ -1,10 +1,16 @@
-import { Section } from '@/components/atoms';
 import { Footer } from '@/components/organisms/Footer/Footer';
-
-import { Main } from '@/components/templates/About/About.styles';
 import { SecondaryHeader } from '@/components/organisms/Header/SecondaryHeader';
 import { VideoCourse } from '@/components/organisms/VideoCourse/VideoCourse';
 import { ElemData } from '@/components/molecules/ColumnList/ColumnList';
+import styled from 'styled-components';
+import { mediaQueries } from '@/constants/mediaQueries';
+
+const VideoWrapper = styled.div`
+  padding-top: 100px;
+  ${mediaQueries.mobile} {
+    padding-top: 40px;
+  }
+`;
 
 export type VideosProps = {
   primaryHeading: string;
@@ -14,10 +20,9 @@ export const Videos = ({ primaryHeading, videos }: VideosProps) => {
   return (
     <div>
       <SecondaryHeader title={primaryHeading} />
-      <Main />
-      <Section>
+      <VideoWrapper>
         <VideoCourse videos={videos} />
-      </Section>
+      </VideoWrapper>
       <Footer />
     </div>
   );

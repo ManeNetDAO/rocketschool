@@ -23,6 +23,7 @@ const NavbarMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 4rem;
   left: 0;

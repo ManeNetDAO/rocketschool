@@ -40,7 +40,7 @@ const Container = styled.a<{ isSelected: boolean }>`
   `}
 
   ${mediaQueries.mobile} {
-    padding: 12px;
+    padding: 20px;
 
     ${SVGWrapper} {
       width: 32px;

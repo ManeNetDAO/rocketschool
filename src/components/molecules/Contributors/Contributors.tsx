@@ -68,7 +68,7 @@ export const Contributors = ({ contributors }: Props) => {
 
   return (
     <div>
-      <H2 margin={'0 0 60px 0'}>
+      <H2 margin={'0 0 40px 0'}>
         <ColorHeading
           fontSize={'45px'}
           mobileSize={'28px'}
