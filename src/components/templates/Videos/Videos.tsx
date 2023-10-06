@@ -9,6 +9,7 @@ const VideoWrapper = styled.div`
   padding-top: 100px;
   ${mediaQueries.mobile} {
     padding-top: 40px;
+    padding-bottom: 70px;
   }
 `;
 

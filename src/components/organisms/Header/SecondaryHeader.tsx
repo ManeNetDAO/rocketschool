@@ -26,7 +26,7 @@ export const SecondaryHeader = ({ title }: { title: string }) => {
           />
         </Mobile>
       </Absolute>
-      <Box padding={'20px 100px 100px'}>
+      <Box padding={'20px 15% 100px'}>
         <Header>
           <H1
             color={colors.text.white}
