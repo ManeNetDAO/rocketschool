@@ -23,7 +23,7 @@ const HeaderWrapper = styled.div`
   position: relative;
   background-size: cover;
   ${mediaQueries.desktop} {
-    height: 851px;
+    height: 850px;
   }
   ${mediaQueries.mobile} {
     height: 630px;
@@ -34,7 +34,7 @@ export const HomePage = () => {
   return (
     <div>
       <main>
-        <HeaderWrapper>
+        <HeaderWrapper className={'header-wrapper'}>
           <Absolute zIndex={-1} width={'100%'} height={'100%'}>
             <Desktop>
               <Image src={'/images/home-hero.jpeg'} alt={''} fill={true} />
@@ -44,7 +44,7 @@ export const HomePage = () => {
             <AnimatedImage src={'images/hero_shapes.png'} height={'300px'} />
           </Desktop>
           <Box padding={'20px 100px'} mobilePadding={'20px 30px'}>
-            <Header padding={'0 0 0 50px'} />
+            <Header />
             <Hero />
           </Box>
         </HeaderWrapper>

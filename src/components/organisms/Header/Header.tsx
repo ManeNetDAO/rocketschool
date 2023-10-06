@@ -11,18 +11,25 @@ import { Modal } from '@/components/molecules/Modal/Modal';
 const StyledHeader = styled.header<{ padding?: string }>`
   ${({ padding }) => padding && `padding: ${padding};`}
 
+  ${mediaQueries.mobile} {
+    .logo-wrapper {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
   .logo-container {
     position: relative;
     width: 217px;
     height: 42px;
-    margin-left: 5px;
   }
 
   ${mediaQueries.desktop} {
     .logo-container {
       width: 200px;
       height: 39px;
-      margin-left: 0;
+      margin-left: 50px;
     }
   }
 `;
@@ -39,7 +46,7 @@ export const Header = ({
   return (
     <StyledHeader padding={padding}>
       <Flex justifyContent={'space-between'}>
-        <Anchor href={'/'}>
+        <Anchor href={'/'} className={'logo-wrapper'}>
           <div className={'logo-container'}>
             <Image
               className={'logo-container'}
