@@ -94,4 +94,8 @@ export const GlobalStyle = createGlobalStyle`
 	padding-top: 0;
   }
 
+  .header-wrapper .logo-container{
+	margin-left: 0;
+  }
+
 `;
