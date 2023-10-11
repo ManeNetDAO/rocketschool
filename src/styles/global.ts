@@ -71,7 +71,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   iframe{
-    border-radius: 3px;
+    border-radius: 14px;
     aspect-ratio: 16 / 9;
     width: 100%;
   }

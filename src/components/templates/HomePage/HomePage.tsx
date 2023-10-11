@@ -20,10 +20,10 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
   background-image: url(/images/home-hero.jpeg);
-  position: relative;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   ${mediaQueries.desktop} {
-    height: 850px;
+    height: 1150px;
   }
   ${mediaQueries.mobile} {
     height: 630px;
@@ -35,11 +35,7 @@ export const HomePage = () => {
     <div>
       <main>
         <HeaderWrapper className={'header-wrapper'}>
-          <Absolute zIndex={-1} width={'100%'} height={'100%'}>
-            <Desktop>
-              <Image src={'/images/home-hero.jpeg'} alt={''} fill={true} />
-            </Desktop>
-          </Absolute>
+          <Absolute zIndex={-1} width={'100%'} height={'100%'}></Absolute>
           <Desktop>
             <AnimatedImage src={'images/hero_shapes.png'} height={'300px'} />
           </Desktop>
@@ -49,10 +45,15 @@ export const HomePage = () => {
           </Box>
         </HeaderWrapper>
       </main>
-      <Flex flexDirection={'column'} alignItems={'center'}>
+      <Flex
+        flexDirection={'column'}
+        alignItems={'center'}
+        margin={'-400px 0 0 0 '}
+        mobilePadding={'350px 0 50px 0'}
+      >
         <LazyVideo
           src={videoUrl}
-          width={'45%'}
+          width={'50%'}
           height={'100%'}
           mobileWidth={'90%'}
         />

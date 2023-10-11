@@ -27,9 +27,9 @@ const StyledHeader = styled.header<{ padding?: string }>`
 
   ${mediaQueries.desktop} {
     .logo-container {
-      width: 200px;
-      height: 39px;
-      margin-left: 50px;
+      width: 248px;
+      height: 48px;
+      margin-left: 20px !important;
     }
   }
 `;
