@@ -98,4 +98,9 @@ export const GlobalStyle = createGlobalStyle`
 	margin-left: 0;
   }
 
+  .learn-ethereum{
+    ${mediaQueries.desktop} {
+      width: 577px;
+    }
+  }
 `;

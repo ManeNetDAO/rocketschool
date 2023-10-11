@@ -6,9 +6,8 @@ export const primaryHeading = 'Rocket School Overview';
 export const firstHeading: Array<Line> = [
   [
     { text: 'Learn About\u00A0', color: 'black' },
-    { text: 'Ethereum', color: 'orange' },
+    { text: 'Ethereum Staking', color: 'orange' },
   ],
-  [{ text: 'Staking', color: 'orange' }],
 ];
 
 export const secondHeading: Array<Line> = [

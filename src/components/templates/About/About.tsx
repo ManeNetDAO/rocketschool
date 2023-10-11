@@ -63,7 +63,7 @@ export const About = (x: Props) => {
           <Flex
             flexDirection={'column'}
             alignItems={'flex-start'}
-            width={'577px'}
+            className={'learn-ethereum'}
           >
             <h2>
               <ColorHeading
