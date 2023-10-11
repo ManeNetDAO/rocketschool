@@ -15,39 +15,50 @@ import { Footer } from '@/components/organisms/Footer/Footer';
 import { videoUrl } from '@/content/homePage';
 import Image from 'next/image';
 import { AnimatedImage } from '@/components/molecules/AnimatedImage/AnimatedImage';
+import { mediaQueries } from '@/constants/mediaQueries';
+import styled from 'styled-components';
+
+const HeaderWrapper = styled.div`
+  background-image: url(/images/home-hero.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  ${mediaQueries.desktop} {
+    height: 1150px;
+  }
+  ${mediaQueries.mobile} {
+    height: 630px;
+  }
+`;
 
 export const HomePage = () => {
   return (
     <div>
       <main>
-        <Section
-          height={'851px'}
-          position={'relative'}
-          mobileBGImage={'url(/images/home-hero.jpeg)'}
-        >
-          <Absolute zIndex={-1} width={'100%'} height={'100%'}>
-            <Desktop>
-              <Image src={'/images/home-hero.jpeg'} alt={''} fill={true} />
-            </Desktop>
-          </Absolute>
+        <HeaderWrapper className={'header-wrapper'}>
+          <Absolute zIndex={-1} width={'100%'} height={'100%'}></Absolute>
           <Desktop>
             <AnimatedImage src={'images/hero_shapes.png'} height={'300px'} />
           </Desktop>
           <Box padding={'20px 100px'} mobilePadding={'20px 30px'}>
-            <Header padding={'0 0 0 50px'} />
+            <Header />
             <Hero />
           </Box>
-        </Section>
+        </HeaderWrapper>
       </main>
-      <Flex flexDirection={'column'} alignItems={'center'}>
+      <Flex
+        flexDirection={'column'}
+        alignItems={'center'}
+        margin={'-400px 0 0 0 '}
+        mobilePadding={'350px 0 50px 0'}
+      >
         <LazyVideo
           src={videoUrl}
-          width={'45%'}
-          height={'440px'}
+          width={'50%'}
+          height={'100%'}
           mobileWidth={'90%'}
         />
       </Flex>
-      <Section padding={'55px 100px'} mobilePadding={'25px 0 25px 25px'}>
+      <Section padding={'55px 100px'} mobilePadding={'25px'}>
         <Cards />
       </Section>
       <Section
@@ -61,7 +72,7 @@ export const HomePage = () => {
           src={'/images/rightRocketCol.png'}
           alt={''}
           width={600}
-          height={893}
+          height={750}
           style={{ position: 'relative', bottom: '150px' }}
         />
       </Section>

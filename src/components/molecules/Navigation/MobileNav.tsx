@@ -21,8 +21,9 @@ const NavbarMenu = styled.div`
     display: none;
   }
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
   position: absolute;
   top: 4rem;
   left: 0;
@@ -36,7 +37,7 @@ const NavbarMenu = styled.div`
 
 const NavbarMenuItem = styled.div`
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.8rem;
   cursor: pointer;
   color: ${colors.text.white};
 

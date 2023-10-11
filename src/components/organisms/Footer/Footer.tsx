@@ -27,19 +27,23 @@ const BackgroundWrapper = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-  padding-top: 95px;
+  padding-top: 30px;
 `;
 
 const MobileFlex = styled(Flex)`
   ${mediaQueries.mobile} {
     padding: 20px;
     font-size: 12px;
+
+    .footer-nav {
+      flex-direction: column;
+    }
   }
 `;
 
 const LeftText = styled(Text)`
   ${mediaQueries.mobile} {
-    max-width: 50%;
+    /*max-width: 50%;*/
   }
 `;
 
@@ -69,7 +73,12 @@ export const Footer = () => {
           <Absolute top={'-38px'} zIndex={2} left={'49.6%'} centered>
             <SVG name={'rocket'} width={45} height={95} />
           </Absolute>
-          <Image src={'/images/clouds-tp.png'} alt={''} fill={true} />
+          <Image
+            src={'/images/clouds-tp.png'}
+            alt={''}
+            fill={true}
+            objectFit={'cover'}
+          />
         </Box>
         <MobileFlex padding={'60px 120px 40px 120px'}>
           <Flex flexDirection={'column'}>
@@ -122,19 +131,27 @@ export const Footer = () => {
             </Button>
           </DesktopFlex>
         </MobileFlex>
-        <MobileFlex justifyContent={'space-between'} padding={'0 120px'}>
+        <MobileFlex
+          flexDirection={'column'}
+          justifyContent={'space-between'}
+          padding={'0 120px'}
+        >
           <LeftText fontSize={'14px'} color={colors.text.white}>
             {footer.disclaimer}
           </LeftText>
-          <Flex padding={'0 0 18px 0'}>
+          <Flex padding={'0 0 18px 0'} className={'footer-nav'}>
             <Anchor
               fontSize={'14px'}
               color={colors.text.white}
-              margin={'0 40px 0 0'}
+              margin={'20px 40px 0 0'}
             >
               Privacy Policy
             </Anchor>
-            <Anchor fontSize={'14px'} color={colors.text.white}>
+            <Anchor
+              fontSize={'14px'}
+              color={colors.text.white}
+              margin={'20px 0 0'}
+            >
               Terms of Service
             </Anchor>
           </Flex>

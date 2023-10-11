@@ -18,9 +18,10 @@ import { Loader } from '@/components/atoms/Loader/Loader';
 import { mediaQueries } from '@/constants/mediaQueries';
 
 const CourseContainer = styled(Flex)`
-  padding: 0 0 100px 0;
+  padding: 0 60px 100px;
   ${mediaQueries.mobile} {
     flex-direction: column;
+    padding: 0 20px 0;
   }
 `;
 
@@ -92,7 +93,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
               onLoad={setLoadedTrue}
               src={videos[selectedIndex].url}
               width={'100%'}
-              height={'500px'}
+              height={'auto'}
               mobileWidth={'100%'}
               borderRadius={'32px'}
             />
@@ -100,11 +101,17 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
               justifyContent={'space-between'}
               alignItems={'center'}
               margin={'28px 0 0 0'}
+              flexWrap={'wrap'}
             >
-              <Text fontWeight={700} fontSize={'28px'} mobileSize={'20px'}>
+              <Text
+                fontWeight={700}
+                fontSize={'28px'}
+                mobileSize={'20px'}
+                margin={'0 0 28px'}
+              >
                 {videos[selectedIndex].title}
               </Text>
-              <Flex>
+              <Flex margin={'0 0 28px'} flexWrap={'wrap'} gap={'12px'}>
                 {selectedIndex !== 0 && (
                   <Button
                     isLight
@@ -114,10 +121,7 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
                   </Button>
                 )}
                 {videos.length - 1 !== selectedIndex && (
-                  <Button
-                    margin={'0 0 0 12px'}
-                    onClick={() => handleChange(selectedIndex + 1)}
-                  >
+                  <Button onClick={() => handleChange(selectedIndex + 1)}>
                     Next Video
                   </Button>
                 )}

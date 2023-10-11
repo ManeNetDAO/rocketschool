@@ -38,8 +38,7 @@ const Container = styled(Flex)`
   scrollbar-width: thin;
 
   ${mediaQueries.mobile} {
-    overflow-x: scroll;
-    flex-direction: row;
+    flex-direction: column;
     width: inherit;
     height: inherit;
     padding-top: 20px;
@@ -88,7 +87,7 @@ export const ColumnList = ({
   setSelected,
 }: Props) => {
   return (
-    <Container padding={'0 0 0 32px'} margin={'0 0 0 30px'}>
+    <Container padding={'0 0 0 32px'} margin={'0'}>
       <H2 fontSize={'21px'} fontWeight={700} margin={'0 0 26px 0'}>
         {title}
       </H2>

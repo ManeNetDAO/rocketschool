@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { mediaQueries } from '@/constants/mediaQueries';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -69,4 +70,37 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  iframe{
+    border-radius: 14px;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+
+  h1{
+    padding-top: 30px;
+    ${mediaQueries.desktop} {
+      padding-top: 86px;
+    }
+  }
+
+  .hero{
+	margin: 150px 0 0 0;
+	${mediaQueries.desktop} {
+		padding-top: 86px;
+	}
+  }
+
+  .hero h1{
+	padding-top: 0;
+  }
+
+  .header-wrapper .logo-container{
+	margin-left: 0;
+  }
+
+  .learn-ethereum{
+    ${mediaQueries.desktop} {
+      width: 577px;
+    }
+  }
 `;

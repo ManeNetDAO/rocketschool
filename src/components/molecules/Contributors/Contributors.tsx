@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   display: inline-flex;
   flex-direction: column;
   border: 1px solid #fccfbc;
+  width: calc(100vw - 30px);
+  min-width: 320px;
+  max-width: 420px;
   border-radius: 17px;
 `;
 
@@ -52,7 +55,7 @@ type Props = {
 
 export const AboutText = styled(Text)`
   ${mediaQueries.mobile} {
-    width: 280px;
+    width: 240px;
   }
 `;
 
@@ -65,7 +68,7 @@ export const Contributors = ({ contributors }: Props) => {
 
   return (
     <div>
-      <H2 margin={'0 0 60px 0'}>
+      <H2 margin={'0 0 40px 0'}>
         <ColorHeading
           fontSize={'45px'}
           mobileSize={'28px'}
@@ -87,12 +90,7 @@ export const Contributors = ({ contributors }: Props) => {
                 height={70}
                 style={{ borderRadius: '50%' }}
               />
-              <Box
-                margin={'0 0 0 16px'}
-                height={'70px'}
-                width={'420px'}
-                mobileWidth={'324px'}
-              >
+              <Box margin={'0 0 0 16px'} width={'420px'} mobileWidth={'100vw'}>
                 {link ? (
                   <Anchor
                     href={link}
@@ -116,7 +114,7 @@ export const Contributors = ({ contributors }: Props) => {
                   fontWeight={400}
                   color={selectedIndex === index ? '#FFFFFF' : ''}
                   margin={'5px 0 0 0'}
-                  width={'385px'}
+                  width={'100%'}
                 >
                   {text}
                 </AboutText>
