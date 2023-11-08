@@ -17,8 +17,7 @@ export const videos: Array<ElemData> = [
   // 2.3 Securing your Node
   {
     title: '2.3.1 Harden SSH',
-    about:
-      'Disable insecure ways of accessing your node over SSH',
+    about: 'Disable insecure ways of accessing your node over SSH',
     url: 'https://www.youtube.com/embed/H6kOq-wW1Pk',
   },
   {
@@ -29,21 +28,18 @@ export const videos: Array<ElemData> = [
   },
   {
     title: '2.3.3 Automatic Security Updates',
-    about:
-      'Set up and enable automatic security updates for your node',
+    about: 'Set up and enable automatic security updates for your node',
     url: 'https://www.youtube.com/embed/h7LIG3dFNZM',
   },
   // 2.4 Installing Rocket Pool
   {
     title: '2.4.1 Installing Rocket Pool',
-    about:
-      'Download the Rocket Pool CLI, and install the Smartnode Stack',
+    about: 'Download the Rocket Pool CLI, and install the Smartnode Stack',
     url: 'https://www.youtube.com/embed/320ICgDAQCk',
   },
   {
     title: '2.4.2 Install Smartnode Stack',
-    about:
-      'Install the Rocket Pool Smartnode Stack',
+    about: 'Install the Rocket Pool Smartnode Stack',
     url: 'https://www.youtube.com/embed/HRKU-GQHQkg',
   },
   {
