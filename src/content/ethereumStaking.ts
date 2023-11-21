@@ -7,7 +7,7 @@ export const videos: Array<ElemData> = [
     title: '1.1 How Ethereum Staking Works',
     about:
       'Learn the basics of decentralized networks, nodes, consensus, validation, proposing, and attestation on Ethereum.',
-    url: 'https://www.youtube.com/embed/aAs8YuGQg18',
+    url: 'https://www.youtube.com/embed/S6TGZ9ckykg',
   },
   {
     title: '1.2 Staking with Rocket Pool',
