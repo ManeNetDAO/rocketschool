@@ -19,7 +19,7 @@ export const contributors = [
   },
   {
     name: 'Interweaver',
-    text: 'Learn about Ethereum, Rocket Pool, running a node, maintaining a node.',
+    text: 'Experienced Ethereum staker and educator',
     image: 'interweaver.png',
     link: 'https://github.com/arbora',
   },

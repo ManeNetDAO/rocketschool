@@ -20,9 +20,18 @@ export const getStaticProps = async (context: { params: ParsedUrlQuery }) => {
 
   // Import and execute the props file to get the props object
   const props = await import(`../content/${pageData.content}`);
-
   const newProps = JSON.parse(JSON.stringify(props));
   newProps.type = pageData.type;
+  newProps.prevVideos = [];
+  newProps.prevSlug = pageData.prevName;
+  newProps.nextSlug = pageData.nextName;
+
+  if (pageData.prevContent !== '') {
+    const prevProps = await import(`../content/${pageData.prevContent}`);
+    const newPrevProps = JSON.parse(JSON.stringify(prevProps));
+    newProps.prevVideos = newPrevProps.videos;
+  }
+
   return { props: newProps };
 };
 

@@ -25,12 +25,16 @@ const CourseContainer = styled(Flex)`
   }
 `;
 
-export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
+export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
+  { videos: Array<ElemData>, prevVideos: Array<ElemData>, prevSlug: String, nextSlug: String }) => {
   const { push, query, isReady } = useRouter();
   const { slug } = query;
   const [selectedIndex, setSelected] = useState(0);
   const [iframeLoaded, setLoaded] = useState(false);
   const [queryIsReady, setReady] = useState(false);
+  const navigate = (path: string) => {
+    window.location.href = window.location.origin + path;
+  };
 
   useEffect(() => {
     if (isReady) {
@@ -105,24 +109,38 @@ export const VideoCourse = ({ videos }: { videos: Array<ElemData> }) => {
             >
               <Text
                 fontWeight={700}
-                fontSize={'28px'}
+                fontSize={'27px'}
                 mobileSize={'20px'}
                 margin={'0 0 28px'}
               >
                 {videos[selectedIndex].title}
               </Text>
               <Flex margin={'0 0 28px'} flexWrap={'wrap'} gap={'12px'}>
-                {selectedIndex !== 0 && (
+                {(selectedIndex !== 0 || (selectedIndex == 0 && prevSlug !== '')) && (
                   <Button
                     isLight
-                    onClick={() => handleChange(selectedIndex - 1)}
+                    onClick={() => {
+                      if (selectedIndex !== 0) {
+                        handleChange(selectedIndex - 1);
+                      }
+                      else {
+                        navigate(`/${prevSlug}?video=${prevVideos.length}`);
+                      }
+                    }}
                   >
-                    Previous Video
+                    Previous {selectedIndex !== 0 ? 'Video' : 'Section'}
                   </Button>
                 )}
-                {videos.length - 1 !== selectedIndex && (
-                  <Button onClick={() => handleChange(selectedIndex + 1)}>
-                    Next Video
+                {((videos.length - 1 !== selectedIndex) || (videos.length - 1 === selectedIndex && nextSlug !== '')) && (
+                  <Button onClick={() => {
+                    if (videos.length - 1 !== selectedIndex) {
+                      handleChange(selectedIndex + 1);
+                    }
+                    else {
+                      navigate(`/${nextSlug}?video=1`);
+                    }
+                  }}>
+                    Next {videos.length - 1 !== selectedIndex ? 'Video' : 'Section'}
                   </Button>
                 )}
               </Flex>

@@ -11,7 +11,6 @@ export type ElemData = {
 };
 
 type Props = {
-  number: string;
   title: string;
   list: Array<ElemData>;
   selectedIndex: number;
@@ -83,7 +82,6 @@ const ListNumber = styled.div<{ isSelected: boolean }>`
 `;
 
 export const ColumnList = ({
-  number,
   title,
   list,
   selectedIndex,
