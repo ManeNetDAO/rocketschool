@@ -4,15 +4,17 @@ export const primaryHeading = 'Ethereum Staking';
 
 export const videos: Array<ElemData> = [
   {
-    title: '1.1 How Ethereum Staking Works',
+    number: '1.1',
+    title: 'How Ethereum Staking Works',
     about:
       'Learn the basics of decentralized networks, nodes, consensus, validation, proposing, and attestation on Ethereum.',
-    url: 'https://www.youtube.com/embed/S6TGZ9ckykg',
+    url: 'https://www.youtube.com/embed/-0v_58F_mas',
   },
   {
-    title: '1.2 Staking with Rocket Pool',
+    number: '1.2',
+    title: 'Staking with Rocket Pool',
     about:
       'Learn about rETH and RPL, LSTs, collateral/bond, minority staking, minipools, node operation, and commissions.',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
+    url: 'https://www.youtube.com/embed/qXCR7XoKJvs',
   },
 ];

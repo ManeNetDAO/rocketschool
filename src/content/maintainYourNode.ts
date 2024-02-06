@@ -4,21 +4,31 @@ export const primaryHeading = 'Maintain Your Node';
 
 export const videos: Array<ElemData> = [
   {
-    title: '3.1 Claiming Your Rewards',
+    number: '3.1',
+    title: 'Claiming Your Rewards',
     about:
-      'Claim your node operator RPL and smoothing pool fees/MEV, find your skimmed consensus rewards, and learn how to exit your minipool to retrieve your full stake',
-    url: 'https://www.youtube.com/embed/aAs8YuGQg18',
+      'Claim your RPL and execution rewards, and find your skimmed consensus rewards',
+    url: 'https://www.youtube.com/embed/rpdz67gJSBI',
   },
   {
-    title: '3.2 Monitoring Your Node',
+    number: '3.2.1',
+    title: 'Maintaining Your Node - Updating Your Node',
     about:
-      'Make sure everything is working, check for and apply updates, check service status and logs, run a Grafana dashboard, use beaconcha.in, and prune your execution client',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
+      'Manually update your node\'s operating system and client software',
+    url: 'https://www.youtube.com/embed/npydFyqTjXg',
   },
   {
-    title: '3.3 Community Tools',
+    number: '3.2.2',
+    title: 'Maintaining Your Node - Monitoring Your Node',
     about:
-      'Learn about several quality community tools for Rocket Pool node operators and minipool stakers',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
+      'Monitor your node with quick terminal commands and with the comprehensive Grafana dashboard',
+    url: 'https://www.youtube.com/embed/8zS6zCFr5DE',
+  },
+  {
+    number: '3.3',
+    title: 'Community Tools',
+    about:
+      'Learn about several quality community tools for Rocket Pool node operators and minipool stakers, and farewell!',
+    url: 'https://www.youtube.com/embed/T8z30twNC1w',
   },
 ];
