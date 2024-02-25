@@ -128,7 +128,7 @@ export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
                       }
                     }}
                   >
-                    Previous {selectedIndex !== 0 ? 'Video' : 'Section'}
+                    ‹ Previous {selectedIndex !== 0 ? 'Video' : 'Section'}
                   </Button>
                 )}
                 {((videos.length - 1 !== selectedIndex) || (videos.length - 1 === selectedIndex && nextSlug !== '')) && (
@@ -140,11 +140,23 @@ export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
                       navigate(`/${nextSlug}?video=1`);
                     }
                   }}>
-                    Next {videos.length - 1 !== selectedIndex ? 'Video' : 'Section'}
+                    Next {videos.length - 1 !== selectedIndex ? 'Video' : 'Section'} ›
                   </Button>
                 )}
               </Flex>
             </Flex>
+            {videos[selectedIndex].commands !== '' && (
+              <div style={{ width: '100%', padding: '10px' }}>
+                <h3>Copy Paste</h3>
+                <textarea style={{ padding: '10px', margin: '5px', width: '100%', background: 'black', color: 'white' }} rows={10}>{videos[selectedIndex].commands}</textarea>
+              </div>
+            )}
+            {videos[selectedIndex].transcript !== '' && (
+              <div style={{ width: '100%', padding: '10px' }}>
+                <h3>Transcript</h3>
+                <textarea style={{ padding: '10px', margin: '5px', width: '100%' }} rows={25}>{videos[selectedIndex].transcript}</textarea>
+              </div>
+            )}
           </React.Fragment>
         )}
       </Flex>

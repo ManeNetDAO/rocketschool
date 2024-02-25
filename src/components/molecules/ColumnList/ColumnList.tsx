@@ -8,6 +8,8 @@ export type ElemData = {
   title: string;
   about: string;
   url: string;
+  commands: string;
+  transcript: string;
 };
 
 type Props = {
