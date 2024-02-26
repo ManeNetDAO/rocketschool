@@ -38,4 +38,4 @@ export const homePageCards = [
   },
 ];
 
-export const videoUrl = 'https://www.youtube.com/embed/aAs8YuGQg18';
+export const videoUrl = 'https://www.youtube.com/embed/VWnXdAMx4ZI';

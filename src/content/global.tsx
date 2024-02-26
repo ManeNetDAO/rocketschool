@@ -36,5 +36,5 @@ export const footer = {
   about:
     'Rocket School is an open-source learning platform that teaches users about Ethereum, staking, running a node, and the Rocket Pool protocol.',
   disclaimer:
-    'This project is backed by the EVMavericks community and is not affiliated with Rocket Pool.',
+    'This platform is a project of the EVMavericks community and was funded by EthStaker and Rocket Pool grants, but is not officially affiliated with Rocket Pool.',
 };

@@ -16,13 +16,28 @@ const VideoWrapper = styled.div`
 export type VideosProps = {
   primaryHeading: string;
   videos: Array<ElemData>;
+  prevVideos: Array<ElemData>;
+  nextVideos: Array<ElemData>;
+  prevSlug: string;
+  nextSlug: string;
 };
-export const Videos = ({ primaryHeading, videos }: VideosProps) => {
+export const Videos = ({
+  primaryHeading,
+  videos,
+  prevVideos,
+  prevSlug,
+  nextSlug,
+}: VideosProps) => {
   return (
     <div>
       <SecondaryHeader title={primaryHeading} />
       <VideoWrapper>
-        <VideoCourse videos={videos} />
+        <VideoCourse
+          videos={videos}
+          prevVideos={prevVideos}
+          prevSlug={prevSlug}
+          nextSlug={nextSlug}
+        />
       </VideoWrapper>
       <Footer />
     </div>

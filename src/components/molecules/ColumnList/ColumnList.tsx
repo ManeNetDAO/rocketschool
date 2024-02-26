@@ -4,9 +4,12 @@ import { colors } from '@/constants/styles';
 import { mediaQueries } from '@/constants/mediaQueries';
 
 export type ElemData = {
+  number: string;
   title: string;
   about: string;
   url: string;
+  commands: string;
+  transcript: string;
 };
 
 type Props = {
@@ -66,10 +69,10 @@ const Elem = styled.div`
 const ListNumber = styled.div<{ isSelected: boolean }>`
   position: absolute;
   top: 0px;
-  left: -12px;
+  left: -18px;
   background-color: ${({ isSelected }) => (isSelected ? '#F26122' : '#B0B0B0')};
   height: 24px;
-  width: 24px;
+  width: 36px;
   border-radius: 32px;
 
   display: flex;
@@ -91,9 +94,9 @@ export const ColumnList = ({
       <H2 fontSize={'21px'} fontWeight={700} margin={'0 0 26px 0'}>
         {title}
       </H2>
-      {list.map(({ title, about }, i) => (
+      {list.map(({ number, title, about }, i) => (
         <Elem key={title} onClick={() => setSelected(i)}>
-          <ListNumber isSelected={selectedIndex === i}>{i + 1}</ListNumber>
+          <ListNumber isSelected={selectedIndex === i}>{number}</ListNumber>
           <Text fontSize={'14px'} fontWeight={700}>
             {title}
           </Text>

@@ -4,82 +4,166 @@ export const primaryHeading = 'Run Your Own Node';
 
 export const videos: Array<ElemData> = [
   {
-    title: '2.1 Deciding to be a Node Operator',
+    number: '2.1',
+    title: 'Deciding To Become A Node Operator',
     about:
       'Learn about node operator responsibilities, rewards, penalties, requirements, and gas',
-    url: 'https://www.youtube.com/embed/aAs8YuGQg18',
+    url: 'https://www.youtube.com/embed/v1VW-n3ShwQ',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.2 Preparing a Local Node',
-    about: 'Set up your hardware and operating system',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
-  },
-  // 2.3 Securing your Node
-  {
-    title: '2.3.1 Harden SSH',
-    about: 'Disable insecure ways of accessing your node over SSH',
-    url: 'https://www.youtube.com/embed/H6kOq-wW1Pk',
-  },
-  {
-    title: '2.3.2 Enabling a Firewall',
+    number: '2.2.1',
+    title: 'Preparing a Local Node - Hardware and Internet Requirements',
     about:
-      'Set up and enable a firewall to prevent unwanted contact with your node',
-    url: 'https://www.youtube.com/embed/ng5lAKlNfnk',
+      'Learn about the required hardware and internet specs to operate a node',
+    url: 'https://www.youtube.com/embed/A3fc9xNvYXs',
+    commands: `https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038`,
+    transcript: ``,
   },
   {
-    title: '2.3.3 Automatic Security Updates',
+    number: '2.2.2',
+    title: 'Preparing a Local Node - Installing The Operating System',
+    about:
+      'Install Ubuntu Desktop Linux from a bootable USB on your node hardware',
+    url: 'https://www.youtube.com/embed/mpNwtEKjfy4',
+    commands: `https://releases.ubuntu.com/
+
+https://pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/`,
+    transcript: ``,
+  },
+  {
+    number: '2.2.3 ',
+    title: 'Preparing a Local Node - Installing OpenSSH Server',
+    about:
+      'Install software on your node that will allow you to access it remotely',
+    url: 'https://www.youtube.com/embed/Wzr7oDgOxVI',
+    commands: `sudo apt update
+
+sudo apt upgrade
+
+sudo apt install openssh-server
+
+sudo systemctl start ssh
+
+sudo systemctl enable ssh
+
+sudo systemctl status ssh
+
+hostname -I`,
+    transcript: ``,
+  },
+  {
+    number: '2.2.4',
+    title: 'Preparing a Local Node - SSH Keypair Login',
+    about:
+      'Create and install an SSH keypair so you can securely access your node from your daily driver computer',
+    url: 'https://www.youtube.com/embed/HZIrV_4PK0Y',
+    commands: ``,
+    transcript: ``,
+  },
+  {
+    number: '2.3.1',
+    title: 'Securing Your Node - Hardening SSH',
+    about: 'Disable insecure ways of accessing your node over SSH',
+    url: 'https://www.youtube.com/embed/RuWVS2VKWjY',
+    commands: ``,
+    transcript: ``,
+  },
+  {
+    number: '2.3.2',
+    title: 'Securing Your Node - Enabling the Firewall',
+    about:
+      'Set up and enable a firewall to block unsolicited external communication with your node',
+    url: 'https://www.youtube.com/embed/rIZEFv6zA9s',
+    commands: ``,
+    transcript: ``,
+  },
+  {
+    number: '2.3.3',
+    title: 'Securing Your Node - Enabling Automatic Security Updates',
     about: 'Set up and enable automatic security updates for your node',
-    url: 'https://www.youtube.com/embed/h7LIG3dFNZM',
-  },
-  // 2.4 Installing Rocket Pool
-  {
-    title: '2.4.1 Installing Rocket Pool',
-    about: 'Download the Rocket Pool CLI, and install the Smartnode Stack',
-    url: 'https://www.youtube.com/embed/320ICgDAQCk',
+    url: 'https://www.youtube.com/embed/pXKM6GtGAJk',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.4.2 Install Smartnode Stack',
+    number: '2.4.1',
+    title: 'Installing Rocket Pool - Installing the CLI',
+    about: 'Download the Rocket Pool command-line interface software',
+    url: 'https://www.youtube.com/embed/-n5QPP1phr4',
+    commands: ``,
+    transcript: ``,
+  },
+  {
+    number: '2.4.2',
+    title: 'Installing Rocket Pool - Installing the Smartnode Stack',
     about: 'Install the Rocket Pool Smartnode Stack',
-    url: 'https://www.youtube.com/embed/HRKU-GQHQkg',
+    url: 'https://www.youtube.com/embed/4ziQKs7PlKo',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.5 Deciding on Testnet',
+    number: '2.5',
+    title: 'Deciding on Testnet',
     about:
       'Decide whether to run a node on testnet before committing to mainnet',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
+    url: 'https://www.youtube.com/embed/PUtxAvNdw9I',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.6 Configuring via the Wizard',
+    number: '2.6',
+    title: 'Configuring Via the Wizard',
     about:
       'Configure a network, choose execution and consensus clients, and configure a fallback node and metrics',
-    url: 'https://www.youtube.com/embed/VZxIU8EXUH4',
+    url: 'https://www.youtube.com/embed/RVD36t-a_Ao',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.7 Starting Rocket Pool',
+    number: '2.7',
+    title: 'Starting Rocket Pool',
     about:
       'Start and stop the Rocket Pool service, check the version, and check sync status',
-    url: 'https://www.youtube.com/embed/4SFNuOBHbQE',
+    url: 'https://www.youtube.com/embed/Rckk-QIACx8',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.8 Creating the Node Wallet',
-    about: 'Create your node wallet',
-    url: 'https://www.youtube.com/embed/MljMbQ9TIik',
+    number: '2.8',
+    title: 'Creating the Node Wallet',
+    about:
+      'Create the account that your node will use to automatically operate and manage some funds',
+    url: 'https://www.youtube.com/embed/RB3kVBqHOvE',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.9 Preparing your Node for Operation',
+    number: '2.9',
+    title: 'Preparing Your Node for Operation',
     about:
       'Load your node wallet, register your node, and set your withdrawal address',
-    url: 'https://www.youtube.com/embed/WjUCuV9G5yg',
+    url: 'https://www.youtube.com/embed/eoMSaAkOPvY',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.10 Opting into the Smoothing Pool and MEV',
-    about: 'Join the smoothing pool, and activate and configure MEV-Boost',
-    url: 'https://www.youtube.com/embed/bQK9Yr1BpQw',
+    number: '2.10',
+    title: 'The Smoothing Pool and MEV',
+    about:
+      'Learn about MEV, join the smoothing pool, and review configuration of MEV-Boost',
+    url: 'https://www.youtube.com/embed/4ahiGkZU238',
+    commands: ``,
+    transcript: ``,
   },
   {
-    title: '2.11 Creating a Minipool',
+    number: '2.11',
+    title: 'Creating a Minipool',
     about:
       'Take the final step - stake your RPL and ETH and create your Rocket Pool minipool',
-    url: 'https://www.youtube.com/embed/tXxSqKw0RvU',
+    url: 'https://www.youtube.com/embed/39PQPX58MrI',
+    commands: ``,
+    transcript: ``,
   },
 ];
