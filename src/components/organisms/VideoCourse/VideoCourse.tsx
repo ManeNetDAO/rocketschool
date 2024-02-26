@@ -25,8 +25,17 @@ const CourseContainer = styled(Flex)`
   }
 `;
 
-export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
-  { videos: Array<ElemData>, prevVideos: Array<ElemData>, prevSlug: String, nextSlug: String }) => {
+export const VideoCourse = ({
+  videos,
+  prevVideos,
+  prevSlug,
+  nextSlug,
+}: {
+  videos: Array<ElemData>;
+  prevVideos: Array<ElemData>;
+  prevSlug: string;
+  nextSlug: string;
+}) => {
   const { push, query, isReady } = useRouter();
   const { slug } = query;
   const [selectedIndex, setSelected] = useState(0);
@@ -116,14 +125,14 @@ export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
                 {videos[selectedIndex].title}
               </Text>
               <Flex margin={'0 0 28px'} flexWrap={'wrap'} gap={'12px'}>
-                {(selectedIndex !== 0 || (selectedIndex == 0 && prevSlug !== '')) && (
+                {(selectedIndex !== 0 ||
+                  (selectedIndex == 0 && prevSlug !== '')) && (
                   <Button
                     isLight
                     onClick={() => {
                       if (selectedIndex !== 0) {
                         handleChange(selectedIndex - 1);
-                      }
-                      else {
+                      } else {
                         navigate(`/${prevSlug}?video=${prevVideos.length}`);
                       }
                     }}
@@ -131,16 +140,20 @@ export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
                     ‹ Previous {selectedIndex !== 0 ? 'Video' : 'Section'}
                   </Button>
                 )}
-                {((videos.length - 1 !== selectedIndex) || (videos.length - 1 === selectedIndex && nextSlug !== '')) && (
-                  <Button onClick={() => {
-                    if (videos.length - 1 !== selectedIndex) {
-                      handleChange(selectedIndex + 1);
-                    }
-                    else {
-                      navigate(`/${nextSlug}?video=1`);
-                    }
-                  }}>
-                    Next {videos.length - 1 !== selectedIndex ? 'Video' : 'Section'} ›
+                {(videos.length - 1 !== selectedIndex ||
+                  (videos.length - 1 === selectedIndex && nextSlug !== '')) && (
+                  <Button
+                    onClick={() => {
+                      if (videos.length - 1 !== selectedIndex) {
+                        handleChange(selectedIndex + 1);
+                      } else {
+                        navigate(`/${nextSlug}?video=1`);
+                      }
+                    }}
+                  >
+                    Next{' '}
+                    {videos.length - 1 !== selectedIndex ? 'Video' : 'Section'}{' '}
+                    ›
                   </Button>
                 )}
               </Flex>
@@ -148,13 +161,29 @@ export const VideoCourse = ({ videos, prevVideos, prevSlug, nextSlug }:
             {videos[selectedIndex].commands !== '' && (
               <div style={{ width: '100%', padding: '10px' }}>
                 <h3>Copy Paste</h3>
-                <textarea style={{ padding: '10px', margin: '5px', width: '100%', background: 'black', color: 'white' }} rows={10}>{videos[selectedIndex].commands}</textarea>
+                <textarea
+                  style={{
+                    padding: '10px',
+                    margin: '5px',
+                    width: '100%',
+                    background: 'black',
+                    color: 'white',
+                  }}
+                  rows={10}
+                >
+                  {videos[selectedIndex].commands}
+                </textarea>
               </div>
             )}
             {videos[selectedIndex].transcript !== '' && (
               <div style={{ width: '100%', padding: '10px' }}>
                 <h3>Transcript</h3>
-                <textarea style={{ padding: '10px', margin: '5px', width: '100%' }} rows={25}>{videos[selectedIndex].transcript}</textarea>
+                <textarea
+                  style={{ padding: '10px', margin: '5px', width: '100%' }}
+                  rows={25}
+                >
+                  {videos[selectedIndex].transcript}
+                </textarea>
               </div>
             )}
           </React.Fragment>

@@ -18,15 +18,26 @@ export type VideosProps = {
   videos: Array<ElemData>;
   prevVideos: Array<ElemData>;
   nextVideos: Array<ElemData>;
-  prevSlug: String;
-  nextSlug: String;
+  prevSlug: string;
+  nextSlug: string;
 };
-export const Videos = ({ primaryHeading, videos, prevVideos, prevSlug, nextSlug }: VideosProps) => {
+export const Videos = ({
+  primaryHeading,
+  videos,
+  prevVideos,
+  prevSlug,
+  nextSlug,
+}: VideosProps) => {
   return (
     <div>
       <SecondaryHeader title={primaryHeading} />
       <VideoWrapper>
-        <VideoCourse videos={videos} prevVideos={prevVideos} prevSlug={prevSlug} nextSlug={nextSlug} />
+        <VideoCourse
+          videos={videos}
+          prevVideos={prevVideos}
+          prevSlug={prevSlug}
+          nextSlug={nextSlug}
+        />
       </VideoWrapper>
       <Footer />
     </div>

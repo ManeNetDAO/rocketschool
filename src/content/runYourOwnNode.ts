@@ -15,7 +15,8 @@ export const videos: Array<ElemData> = [
   {
     number: '2.2.1',
     title: 'Preparing a Local Node - Hardware and Internet Requirements',
-    about: 'Learn about the required hardware and internet specs to operate a node',
+    about:
+      'Learn about the required hardware and internet specs to operate a node',
     url: 'https://www.youtube.com/embed/A3fc9xNvYXs',
     commands: `https://gist.github.com/yorickdowne/f3a3e79a573bf35767cd002cc977b038`,
     transcript: ``,
@@ -23,7 +24,8 @@ export const videos: Array<ElemData> = [
   {
     number: '2.2.2',
     title: 'Preparing a Local Node - Installing The Operating System',
-    about: 'Install Ubuntu Desktop Linux from a bootable USB on your node hardware',
+    about:
+      'Install Ubuntu Desktop Linux from a bootable USB on your node hardware',
     url: 'https://www.youtube.com/embed/mpNwtEKjfy4',
     commands: `https://releases.ubuntu.com/
 
@@ -33,7 +35,8 @@ https://pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/`,
   {
     number: '2.2.3 ',
     title: 'Preparing a Local Node - Installing OpenSSH Server',
-    about: 'Install software on your node that will allow you to access it remotely',
+    about:
+      'Install software on your node that will allow you to access it remotely',
     url: 'https://www.youtube.com/embed/Wzr7oDgOxVI',
     commands: `sudo apt update
 
@@ -53,7 +56,8 @@ hostname -I`,
   {
     number: '2.2.4',
     title: 'Preparing a Local Node - SSH Keypair Login',
-    about: 'Create and install an SSH keypair so you can securely access your node from your daily driver computer',
+    about:
+      'Create and install an SSH keypair so you can securely access your node from your daily driver computer',
     url: 'https://www.youtube.com/embed/HZIrV_4PK0Y',
     commands: ``,
     transcript: ``,
@@ -129,7 +133,8 @@ hostname -I`,
   {
     number: '2.8',
     title: 'Creating the Node Wallet',
-    about: 'Create the account that your node will use to automatically operate and manage some funds',
+    about:
+      'Create the account that your node will use to automatically operate and manage some funds',
     url: 'https://www.youtube.com/embed/RB3kVBqHOvE',
     commands: ``,
     transcript: ``,
@@ -146,7 +151,8 @@ hostname -I`,
   {
     number: '2.10',
     title: 'The Smoothing Pool and MEV',
-    about: 'Learn about MEV, join the smoothing pool, and review configuration of MEV-Boost',
+    about:
+      'Learn about MEV, join the smoothing pool, and review configuration of MEV-Boost',
     url: 'https://www.youtube.com/embed/4ahiGkZU238',
     commands: ``,
     transcript: ``,

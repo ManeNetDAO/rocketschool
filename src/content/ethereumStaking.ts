@@ -50,7 +50,8 @@ SuperPhiz: The total yield earned by staking on Ethereum is a combination of con
 JT: Wow, great job, SuperPhiz. Thanks so much for stopping by today. Man, this is an amazing step. We're getting ready to go on this journey together. Stay tuned for the next episode where we do a deep dive on what's inside the staking thrusters within the Rocket Pool engine. On behalf of Rocket School, my name is JT.
 
 SuperPhiz: And I'm SuperPhiz!
-`},
+`,
+  },
   {
     number: '1.2',
     title: 'Staking with Rocket Pool',
