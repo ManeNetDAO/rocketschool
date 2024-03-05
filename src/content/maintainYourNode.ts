@@ -16,7 +16,7 @@ export const videos: Array<ElemData> = [
     number: '3.2.1',
     title: 'Maintaining Your Node - Updating Your Node',
     about: "Manually update your node's operating system and client software",
-    url: 'https://www.youtube.com/embed/npydFyqTjXg',
+    url: 'https://www.youtube.com/embed/MG8rOQOn1Gg',
     commands: ``,
     transcript: ``,
   },
