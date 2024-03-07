@@ -48,8 +48,7 @@ export const HomePage = () => {
       <Flex
         flexDirection={'column'}
         alignItems={'center'}
-        margin={'-400px 0 0 0 '}
-        mobilePadding={'350px 0 50px 0'}
+        mobilePadding={'0 0 50px 0'}
       >
         <LazyVideo
           src={videoUrl}

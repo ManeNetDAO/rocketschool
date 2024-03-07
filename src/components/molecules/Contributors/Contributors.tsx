@@ -29,8 +29,10 @@ const Contributor = styled.div<{ isSelected?: boolean }>`
            background: linear-gradient(277.41deg, #FF5C00 18.51%, #FF7700 35.87%, #FF8C39 64.93%);
            border-radius: 14.5822px;
            width: calc(100% + 70px);
+           padding-right: 94px;
            
-     ${mediaQueries.mobile} {
+   ${mediaQueries.mobile} {
+     padding-right: 24px; //ensuring the 94px above only applies to desktop
      right: 0px;
      width: 100%;
   }

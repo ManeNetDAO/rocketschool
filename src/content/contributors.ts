@@ -26,8 +26,8 @@ export const contributors = [
   {
     name: 'Eyezick',
     image: 'eyezick.png',
-    text: '',
-    link: 'https://github.com/eyezick',
+    text: 'DAO Hacker, joker, and software engineer',
+    link: 'https://twitter.com/eyetothezick',
   },
   {
     name: 'ShfRyn',
