@@ -7,7 +7,7 @@ export const contributors = [
   },
   {
     name: 'Doubtstars',
-    text: 'A Learning and Development professional and instructional designer who has worked with many large tech companies in the past, and has a long history of involvement in the web3 community, project managing Rocket School and planning HodlerCon, the EthFinance community’s biannual meetup. The Co-Founder of TokenomicsExplained.com with her husband LogristheBard',
+    text: 'A Learning and Development professional and instructional designer who is the project manager for Rocket School, HodlerCon Program Director, and Co-Founder of TokenomicsExplained.com with her husband LogristheBard',
     image: 'doubtstars.webp',
     link: 'https://tokenomicsexplained.com/',
   },
