@@ -27,7 +27,7 @@ const BackgroundWrapper = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-  padding-top: 30px;
+  padding-top: 100px;
 `;
 
 const MobileFlex = styled(Flex)`
