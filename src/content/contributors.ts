@@ -7,7 +7,7 @@ export const contributors = [
   },
   {
     name: 'Doubtstars',
-    text: '',
+    text: 'A Learning and Development professional and instructional designer who is the project manager for Rocket School, HodlerCon Program Director, and Co-Founder of TokenomicsExplained.com with her husband LogristheBard',
     image: 'doubtstars.webp',
     link: 'https://tokenomicsexplained.com/',
   },
@@ -28,6 +28,12 @@ export const contributors = [
     image: 'eyezick.png',
     text: 'DAO Hacker, joker, and software engineer',
     link: 'https://twitter.com/eyetothezick',
+  },
+  {
+    name: 'Austonst',
+    image: 'austonst.webp',
+    text: 'A long-time member of the Ethereum community, and frequently contributes to the EthFinance and EthStaker communities. Part of the Aestus Relay team, operates solo and Rocket Pool validators, and really likes the phrase "credible neutrality".',
+    link: 'https://etherscan.io/name-lookup-search?id=austonst.eth',
   },
   {
     name: 'ShfRyn',
