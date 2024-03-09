@@ -23,7 +23,7 @@ const HeaderWrapper = styled.div`
   background-repeat: no-repeat;
   ${mediaQueries.desktop} {
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     height: 105vh;
   }
   ${mediaQueries.mobile} {
