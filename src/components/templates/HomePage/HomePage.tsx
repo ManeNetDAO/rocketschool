@@ -21,14 +21,12 @@ import styled from 'styled-components';
 const HeaderWrapper = styled.div`
   background-image: url(/images/home-hero.jpeg);
   background-repeat: no-repeat;
+  background-size: contain;
   ${mediaQueries.desktop} {
-    background-size: cover;
-    background-position: center;
-    height: 105vh;
+    height: 1150px;
   }
   ${mediaQueries.mobile} {
-    background-size: contain;
-    height: 630px;
+    height: 700px;
   }
 `;
 
