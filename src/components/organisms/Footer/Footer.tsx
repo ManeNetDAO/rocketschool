@@ -61,7 +61,13 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <BackgroundWrapper>
-        <Absolute top={'-160px'} zIndex={3} width={'100%'} height={'206px'}>
+        <Absolute
+          top={'-160px'}
+          zIndex={3}
+          width={'100%'}
+          height={'206px'}
+          style={{ pointerEvents: 'none' }}
+        >
           <Image
             src={'/images/footer-bg-shapes.png'}
             alt={''}

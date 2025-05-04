@@ -25,55 +25,55 @@ export const thirdHeading: Array<Line> = [
 ];
 
 export const paragraph =
-  'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam P) animal molestiae te. Ex duo eripuit mentitum.';
+  'In this series, we’ll explore how Ethereum staking works, how to increase your staking rewards and network decentralization by using Rocket Pool, what it takes to become a node operator, and how to securely set up and maintain your own node and how to make the most of community tools to maintain and monitor your node!';
 
-export const firstVideoLink = '';
-export const secondVideoLink = '';
-export const thirdVideoLink = '';
+export const firstVideoLink = '/ethereum-staking';
+export const secondVideoLink = '/run-your-own-node';
+export const thirdVideoLink = '/maintain-your-node';
 
 export const firstGrid: GridCards = [
   {
-    name: 'Learn one',
+    name: 'Should You Run a Node?',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Understand what it means to be a Rocket Pool node operator — the responsibilities, hardware requirements, gas costs, and potential rewards.',
   },
   {
-    name: 'Learn two',
+    name: 'Set Up Your Node Securely',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Follow step-by-step lessons to prepare your node: install Ubuntu, set up SSH, secure your firewall, and enable auto-updates.',
   },
   {
-    name: 'Learn three',
+    name: 'Install Rocket Pool Software',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Install the Rocket Pool CLI and Smartnode Stack. Learn how to configure your setup, connect clients, and get syncing.',
   },
   {
-    name: 'Learn four',
+    name: 'Launch Your Minipool',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'From testnet decisions to wallet setup and finally staking — walk through every step to launch your very own minipool.',
   },
 ];
 
 export const secondGrid: GridCards = [
   {
-    name: 'Rocket one',
+    name: 'Track and Claim Your Rewards',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Learn how to claim execution, consensus, and RPL rewards — and understand what to look for when skimming.',
   },
   {
-    name: 'Rocket two',
+    name: 'Keep Your Node Updated and Online',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Master the essentials of node maintenance, from software updates to monitoring using Grafana and terminal tools.',
   },
   {
-    name: 'Rocket three',
+    name: 'Use Community Tools',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      ' Explore powerful tools created by the Rocket Pool community to make node operation easier and more efficient.',
   },
   {
-    name: 'Rocket four',
+    name: 'Stay Secure, Stay Staked',
     about:
-      'Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad nam no suscipit quaerendum.',
+      'Keep your node healthy, your ETH earning, and your setup resilient with best practices from experienced operators.',
   },
 ];
 
@@ -82,7 +82,7 @@ export const secondImage = '/images/rocket-pool-graphic.png';
 export const thirdImage = '/images/eth-staking-graphic.png';
 
 export const checks = [
-  'Dicam prodesset usu te, recteque neglegentur quo cu',
-  'Dicam prodesset usu te, recteque neglegentur quo cu',
-  'Dicam prodesset usu te, recteque neglegentur quo cu',
+  'Understand Ethereum’s Proof-of-Stake System',
+  'Explore Staking with Rocket Pool',
+  'Maintain Your Bode and Track Your Rewards',
 ];
